@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 
-const API_BASE = import.meta.env.VITE_WEBHOOK_URL?.replace(/\/webhook$/, '') || 'http://localhost:4000'
+const API_BASE = import.meta.env.VITE_WEBHOOK_URL?.replace(/\/webhook$/, '') || '/api'
 
 export default function FeedbackPage() {
   const { t, lang } = useLang()

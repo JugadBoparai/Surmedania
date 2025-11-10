@@ -4,7 +4,7 @@ import { useLang } from '../context/LanguageContext'
 
 const SPOND_LINK = 'https://spond.example/group' // Replace with real Spond group link
 const VIPPS_PAYLINK = 'https://vipps.example/pay' // Replace with Vipps payment link or integration
-const SHEETS_WEBHOOK = import.meta.env.VITE_WEBHOOK_URL || 'http://localhost:4000/webhook' // Use Vite env or fallback to localhost
+const SHEETS_WEBHOOK = import.meta.env.VITE_WEBHOOK_URL || '/api/webhook' // Use serverless function
 
 export default function RegistrationPage(){
   const { t, lang } = useLang()
