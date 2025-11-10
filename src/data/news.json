@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "en": "Annual Members' Meeting",
+      "no": "Årsmøte for medlemmer",
+      "pa": "ਵਾਰਸ਼ਿਕ ਮੈਂਬਰ ਮੀਟਿੰਗ"
+    },
+    "date": "2026-01-15",
+    "description": {
+      "en": "All members (active and supported) are invited to our annual meeting in January to review the past year, align on expectations for the coming year, and hold member voting.",
+      "no": "Alle medlemmer (aktive og støttemedlemmer) inviteres til vårt årsmøte i januar for å gå gjennom året, avklare forventninger for det kommende året og gjennomføre avstemninger.",
+      "pa": "ਸਾਰੇ ਮੈਂਬਰ (ਸਰਗਰਮ ਅਤੇ ਸਹਾਇਕ) ਜਨਵਰੀ ਵਿੱਚ ਸਾਡੀ ਵਾਰਸ਼ਿਕ ਮੀਟਿੰਗ ਲਈ ਸੱਦੇ ਜਾਂਦੇ ਹਨ ਤਾਂ ਜੋ ਪਿਛਲੇ ਸਾਲ ਦੀ ਸਮੀਖਿਆ ਕਰ ਸਕਣ ਅਤੇ ਆਉਣ ਵਾਲੇ ਸਾਲ ਲਈ ਉਮੀਦਾਂ ਨਿਰਧਾਰਤ ਕਰ ਸਕਣ।"
+    },
+    "image": "",
+    "location": "TBD"
+  },
+  {
+    "id": 2,
+    "title": {
+      "en": "Spring Showcase",
+      "no": "Vår Oppvisning",
+      "pa": "ਬਸੰਤ ਸ਼ੋਕੇਸ"
+    },
+    "date": "2026-05-20",
+    "description": {
+      "en": "Showcasing our student groups in a vibrant spring stage program featuring Bhangra, Giddha, and Bollywood performances.",
+      "no": "Vise våre elevgrupper i et livlig vår sceneshow med Bhangra, Giddha og Bollywood-forestillinger.",
+      "pa": "ਭੰਗੜਾ, ਗਿੱਧਾ ਅਤੇ ਬਾਲੀਵੁੱਡ ਪ੍ਰਦਰਸ਼ਨਾਂ ਵਾਲੇ ਰੰਗਬਰੰਗੇ ਬਸੰਤ ਮੰਚ ਪ੍ਰੋਗਰਾਮ ਵਿੱਚ ਸਾਡੇ ਵਿਦਿਆਰਥੀ ਸਮੂਹਾਂ ਨੂੰ ਦਰਸਾਉਣਾ।"
+    },
+    "image": "",
+    "location": "Ravinen Hall"
+  },
+  {
+    "id": 3,
+    "title": {
+      "en": "Halloween Special Class",
+      "no": "Halloween Spesiell Klasse",
+      "pa": "ਹੈਲੋਵੀਨ ਖਾਸ ਕਲਾਸ"
+    },
+    "date": "2026-10-31",
+    "description": {
+      "en": "A fun themed class with choreography and group activities. Come dressed in costume!",
+      "no": "En morsom temaklasse med koreografi og gruppeaktiviteter. Kom gjerne utkledd!",
+      "pa": "ਕੋਰੀਓਗ੍ਰਾਫੀ ਅਤੇ ਗਰੁੱਪ ਗਤੀਵਿਧੀਆਂ ਵਾਲੀ ਇੱਕ ਮਨੋਰੰਜਕ ਥੀਮ ਵਾਲੀ ਕਲਾਸ। ਕਾਸਟਯੂਮ ਵਿੱਚ ਆਓ!"
+    },
+    "image": "",
+    "location": "Ammerud Skole"
+  },
+  {
+    "id": 4,
+    "title": {
+      "en": "Diwali Celebration Workshop",
+      "no": "Diwali Feiring Workshop",
+      "pa": "ਦੀਵਾਲੀ ਜਸ਼ਨ ਵਰਕਸ਼ਾਪ"
+    },
+    "date": "2026-11-15",
+    "description": {
+      "en": "An evening of dance and lights — special Diwali-themed class and performance celebrating the Festival of Lights.",
+      "no": "En kveld med dans og lys — Diwali-tema klasse og forestilling som feirer lysfestivalen.",
+      "pa": "ਡਾਂਸ ਅਤੇ ਰੋਸ਼ਨੀ ਦੀ ਇੱਕ ਸ਼ਾਮ — ਦੀਵਾਲੀ ਥੀਮ ਵਾਲੀ ਖਾਸ ਕਲਾਸ ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ।"
+    },
+    "image": "",
+    "location": "Ammerud Skole"
+  },
+  {
+    "id": 5,
+    "title": {
+      "en": "Winter Performance Gala",
+      "no": "Vinter Forestilling Galla",
+      "pa": "ਸਰਦੀ ਪ੍ਰਦਰਸ਼ਨ ਗਾਲਾ"
+    },
+    "date": "2026-12-15",
+    "description": {
+      "en": "End the year with a spectacular performance showcasing all our dance styles. Family and friends welcome!",
+      "no": "Avslutt året med en spektakulær forestilling som viser alle våre dansestiler. Familie og venner er velkommen!",
+      "pa": "ਸਾਲ ਨੂੰ ਇੱਕ ਸ਼ਾਨਦਾਰ ਪ੍ਰਦਰਸ਼ਨ ਨਾਲ ਖਤਮ ਕਰੋ ਜੋ ਸਾਡੇ ਸਾਰੇ ਡਾਂਸ ਸਟਾਈਲਾਂ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੈ। ਪਰਿਵਾਰ ਅਤੇ ਦੋਸਤ ਸਵਾਗਤ ਹਨ!"
+    },
+    "image": "",
+    "location": "Ravinen Hall"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "name": "surmedania-webhook",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "append:test-row": "node scripts/append-test-row.js",
+    "append:test-feedback": "node scripts/append-test-feedback.js",
+    "ensure:sheet-headers": "node scripts/ensure-sheet-headers.js",
+    "append:test-supported": "node scripts/append-test-supported.js",
+    "migrate:relation-to-end": "node scripts/migrate-relation-to-end.js",
+    "migrate:timestamps-no": "node scripts/migrate-timestamps-no.js",
+    "migrate:feedback-timestamps-no": "node scripts/migrate-feedback-timestamps-no.js",
+    "migrate:feedback-csv-timestamps-no": "node scripts/migrate-feedback-csv-timestamps-no.js"
+    ,"migrate:supported-csv-relation-to-comments": "node scripts/migrate-supported-csv-relation-to-comments.js"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.6.0",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "googleapis": "^131.0.0",
+    "nodemailer": "^7.0.10",
+    "qrcode.react": "^4.2.0"
+  }
+}

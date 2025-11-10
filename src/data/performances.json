@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": { "en": "Autumn Ensemble", "no": "Høst Ensemble", "pa": "ਸ਼ਰਦ ਰੁੱਤ ਐਂਸੈਂਬਲ" },
+    "date": "2025-05-20",
+    "location": "Ravinen Hall",
+    "description": {
+      "en": "Showcasing our student groups in a seasonal program.",
+      "no": "Vise våre elevgrupper i et sesongprogram.",
+      "pa": "ਮੌਸਮੀ ਪ੍ਰੋਗਰਾਮ ਵਿੱਚ ਸਾਡੇ ਵਿਦਿਆਰਥੀ ਸਮੂਹਾਂ ਨੂੰ ਦਰਸਾਉਣਾ।"
+    },
+    "media": ""
+  }
+]

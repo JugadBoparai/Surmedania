@@ -1,0 +1,896 @@
+{
+  "en": {
+      "date": {
+        "months": ["January","February","March","April","May","June","July","August","September","October","November","December"],
+        "daysShort": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+      },
+    "notFound": {
+      "title": "Page not found",
+      "message": "The page you're looking for doesn't exist."
+    },
+    "feedback": {
+      "title": "Feedback",
+      "subtitle": "We value your input! Share your thoughts about classes, instructors, or suggestions for improvement.",
+      "anonymous": "Send anonymously",
+      "anonymousDesc": "Your identity will remain private",
+      "feedbackLabel": "Your feedback",
+      "placeholder": "Share your thoughts, suggestions, or experiences with us...",
+      "hint": "Be as detailed as you like. We appreciate all feedback!",
+      "submit": "Submit Feedback",
+      "success": "Thank you for your feedback!",
+      "privacy": "Your feedback is confidential and helps us improve our services.",
+      "excerpt": "Share your thoughts, suggestions, or experiences with us.",
+      "ctaLink": "Give feedback",
+      "namePlaceholder": "Enter your full name",
+      "emailPlaceholder": "your.email@example.com"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "classes": "Classes",
+      "styles": "Styles",
+      "gallery": "Gallery",
+  "news": "News",
+      "registration": "Registration",
+    "faq": "FAQ",
+    "feedback": "Feedback",
+      "a11y": {
+        "switchToNo": "Switch language to Norwegian",
+        "switchToEn": "Switch language to English",
+        "switchToPa": "Switch language to Punjabi",
+        "chooseLanguage": "Choose language",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "home": "Surmedania home"
+      }
+    },
+    "hero": {
+      "tagline": "Experience the Energy of Punjabi Dance",
+      "viewClasses": "View Classes",
+      "registerNow": "Register Now",
+      "description": "Learn Bhangra, Giddha, and Bollywood — from beginners to advanced. Build strength, confidence, and community through dance.",
+      "features": {
+        "allLevels": "All levels",
+        "weeklyClasses": "Weekly classes",
+        "expertInstructors": "Expert instructors"
+      },
+      "imageAlt": "Decorative students dancing — placeholder"
+    },
+    "common": {
+      "upcoming": "Upcoming",
+      "all": "All",
+      "logoAlt": "Surmedania logo",
+      "brandTagline": "Dance School",
+      "event": "Event",
+      "viewOnMap": "View on map",
+      "gallery": "Gallery"
+    },
+    "styles": {
+      "title": "Dance Styles",
+      "subtitle": "Explore the three main styles we teach – each with its unique history, rhythm, and expression.",
+      "characteristics": "Characteristics:",
+      "origin": "📜 Origin",
+      "keyMoves": "💫 Key Moves",
+      "music": "🎵 Music",
+      "attire": "👗 Attire",
+      "showLess": "Show Less",
+      "learnMore": "Learn More",
+      "readyToDance": "Ready to Dance?",
+      "ctaSubtitle": "Join us and experience the joy of traditional and modern Indian dance.",
+      "registerNow": "Register Now",
+      "viewSchedule": "View Schedule",
+      "names": {
+        "bhangra": "Bhangra",
+        "giddha": "Giddha",
+        "bollywood": "Bollywood"
+      }
+    },
+    "home": {
+      "schedulePreview": "Schedule preview",
+      "whyChoose": {
+        "title": "Why Choose Surmedania?",
+        "subtitle": "We offer more than just dance classes — we build a community",
+        "allLevels": {
+          "title": "All Skill Levels",
+          "description": "From beginners to advanced — everyone is welcome to learn and grow together."
+        },
+        "culturalPride": {
+          "title": "Cultural Pride",
+          "description": "Learn authentic Punjabi dance while celebrating tradition and community."
+        },
+        "funEnergy": {
+          "title": "Fun & Energy",
+          "description": "Experience the joy of dance in an inclusive environment full of laughter and rhythm."
+        }
+      },
+      "stats": {
+        "yearsExperience": "Years Experience",
+        "activeMembers": "Active Members",
+        "smilesShared": "Smiles Shared",
+        "memoriesCreated": "Memories Created"
+      },
+      "cta": {
+        "title": "Ready to Begin?",
+        "subtitle": "Join us and experience the tradition, energy, and joy of Punjabi dance.",
+        "registerNow": "Register Now",
+        "viewClasses": "View Classes"
+      }
+    },
+    "schedule": {
+      "adult": "Thursday 19–21 — Adults 16+",
+  "kids": "Sunday 15–17 — Kids under 16"
+    },
+    "about": {
+      "storyTitle": "About Surmedania",
+      "tagline": "Where rhythm meets culture.",
+      "founderTitle": "Our Vision",
+      "philosophyTitle": "Movement, Tradition, Community",
+      "storyIntro": "Surmedania is a dance platform founded by Angela Kaur, with the dream of building a space where everyone can learn Bhangra — from the true basics to advanced levels.",
+      "founderBio": "Our vision is to make Punjabi dance accessible to everyone, no matter their age or experience. Through Surmedania, we aim to spread joy, confidence, and cultural pride — one beat at a time.",
+      "philosophyText": "At Surmedania, we celebrate movement, tradition, and community. Whether you’re joining to stay active, connect with your roots, or simply have fun, you’ll find a welcoming environment full of energy, laughter, and rhythm.",
+      "founderAlt": "Founder portrait",
+      "founderCaption": "Angela Kaur — Founder"
+    },
+    "classes": {
+      "location": "Ravinen, Rælingen",
+      "locationTitle": "Location",
+      "thursday": "Thursday 19–21: Adults 16+",
+  "sunday": "Sunday 15–17: Kids under 16",
+      "register": "Register Now",
+      "scheduleTitle": "Class Schedule",
+      "classLabel": "Bhangra Class",
+      "prevMonth": "Previous month",
+      "nextMonth": "Next month",
+      "thursdayDay": "Thursday",
+      "thursdayTime": "19:00 – 21:00",
+      "thursdayAudience": "Adults 16+",
+      "sundayDay": "Sunday",
+      "sundayTime": "15:00 – 17:00",
+      "sundayAudience": "Kids under 16",
+      "todayButton": "Today",
+      "legendAdults": "Adults (Thu)",
+      "legendKids": "Kids (Sun)",
+      "legendEvents": "Special Events",
+      "legendHolidays": "Holidays",
+      "downloadFullCalendar": "Download full calendar"
+    },
+    "performances": {
+      "title": "Performances",
+      "relatedMedia": "See related media"
+    },
+    "registration": {
+      "title": "Registration",
+      "active": "Active Member",
+      "supported": "Supported Member",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "dob": "Date of Birth",
+      "style": "Dance style",
+      "styleSelect": "Select style...",
+      "styleBhangra": "Bhangra",
+      "styleGiddha": "Giddha",
+      "styleBollywood": "Bollywood",
+      "experience": "Experience level",
+      "experienceSelect": "Select level...",
+      "experienceBeginner": "Beginner",
+      "experienceIntermediate": "Intermediate",
+      "experienceAdvanced": "Advanced",
+      "experienceProfessional": "Professional",
+      "comments": "Comments (optional)",
+      "relation": "Relation to student (optional)",
+  "paymentOptions": "Payment options (Vipps): 6 months: 349 NOK, 12 months: 449 NOK",
+  "classSelection": "Class selection",
+  "classSelect": "Select class",
+  "submit": "Submit",
+  "success": "Registration successful!",
+      "paymentAmount": "Payment Amount",
+      "selectPaymentAmount": "Select payment...",
+      "minimum": "minimum",
+      "supportedHelper": "Enter any amount 50 NOK or more",
+      "selectPayment": "Please select payment amount",
+      "activePaymentError": "Active members must select 349 or 449 NOK",
+      "supportedPaymentError": "Supported members must contribute minimum 50 NOK",
+      "fillRequired": "Please fill required fields",
+      "saveError": "There was a problem saving your registration. Please try again later.",
+      "activeBenefitsParticipate": "Participate in weekly dance classes",
+      "activeBenefitsEvents": "Join events and showcases",
+      "activeBenefitsWorkshops": "Access to exclusive workshops",
+      "activeBenefitsSpond": "Join our Spond community group",
+      "activeBenefitsUpdates": "Receive regular updates and news",
+      "locationLabel": "Location:",
+      "classesLabel": "Classes:",
+      "classDays": "Thursday & Sunday",
+      "redirectSpond": "After payment you will be redirected to our Spond group.",
+      "supportedBenefitsMission": "Support our dance school's mission",
+      "supportedBenefitsUpdates": "Receive regular updates and newsletters",
+      "supportedBenefitsNewsEvents": "Stay informed via News & Events",
+      "supportedBenefitsEarly": "Early access to event announcements",
+      "supportedBenefitsCommunity": "Help us grow the dance community",
+      "supportHelp": "Your support helps us continue our passion for dance and culture."
+    },
+    "support": {
+      "title": "Support Us",
+      "description": "Become a supported member and help us grow our community.",
+      "now": "Support now"
+    },
+    "confirm": {
+      "title": "Thank you — registration received",
+      "message": "We have recorded your registration. Please choose how you want to continue:",
+      "selectPayment": "Select Payment",
+      "payVipps": "Pay with Vipps",
+      "openSpond": "Open Spond group",
+      "returnHome": "Return home",
+      "months": "months",
+      "perMonth": "Per month",
+      "bestValue": "BEST VALUE",
+      "vippsInstruction": "Send payment to Vipps number:",
+      "vippsMessage": "Include your name in the message",
+      "customAmount": "Enter Amount",
+      "continueToPayment": "Continue to Payment",
+      "selectPaymentError": "Please select a payment option",
+      "minimumError": "Minimum payment is 50 NOK"
+    },
+    "faq": {
+      "q1": "Who can join Surmedania Dance School?",
+      "q2": "When are the classes?",
+      "q3": "Where are the classes held?",
+      "q4": "How much does it cost?",
+      "q5": "How do I register?",
+      "q6": "What if I am a parent or family member?",
+      "q7": "Can I switch between classes or packages?",
+      "q8": "Where can I park?",
+      "qWear": "What should I wear?",
+      "qPerform": "Do you perform at events?",
+      "qBook": "Can I book Surmedania for private functions?",
+      "h1Title": "Frequently Asked Questions",
+      "h1Intro": "Find answers to common questions about our classes, membership, and practical information. For additional inquiries, please contact us.",
+      "sectionGeneral": "General Questions",
+      "sectionMembership": "Membership & Registration",
+      "sectionPractical": "Practical Information",
+      "ctaTitle": "Additional Inquiries?",
+      "ctaText": "Contact us if you have more questions.",
+      "ctaContact": "Contact Us",
+      "ctaRegister": "Register",
+      "a1": "Everyone is welcome — adults and children. No experience required.",
+      "a2": "Thursday 19:00–21:00 for adults. Sunday 15:00–17:00 for children.",
+      "a3": "All classes are at Ravinen in Rælingen. See our Classes page for address and map.",
+      "a4": "Active membership includes classes. Supported membership is for family and supporters. See the Registration page for pricing and payment options.",
+      "a5": "Register via the Registration page. Enter your details, choose your class time and membership type, then follow the payment instructions. You'll receive a confirmation once payment is processed.",
+      "a6": "Yes. Parents and family can register as supported members. To register a child, select 'Active Member' and choose the age group. Parents are welcome to observe classes and join our events.",
+      "a7": "Yes, contact us via email or feedback form to switch classes or adjust your membership. Changes depend on availability.",
+      "a8": "Free parking is available by Marikollen Kultursal and at the nearby football field parking. It's free when you register with the EasyPark app. See our Classes page for the full address and map.",
+      "aWear": "Wear comfortable workout clothes and socks (we dance without shoes). Avoid jeans. Bring water.",
+      "aPerform": "Yes, we regularly perform at cultural events and festivals. Members can participate in showcases and competitions. See our News & Events page for upcoming performances.",
+      "aBook": "Yes! We offer private dance lessons and performances for weddings, birthday parties, corporate events, and other special occasions. Contact us with your event details and we'll discuss a custom package."
+    },
+    "footer": {
+      "contact": "Contact",
+      "address": "Ravinen, Rælingen",
+      "credit": "Powered by Jugad Boparai",
+      "opensNewTab": "(opens in new tab)",
+      "follow": "Follow",
+      "emailLabel": "Email",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "phoneLabel": "Phone"
+      ,"rightsReserved": "All rights reserved."
+    }
+    ,
+    "news": {
+      "title": "News & Events",
+      "subtitle": "Stay updated on news, upcoming events, and highlights from Surmedania.",
+      "nextEvent": "Next Event",
+      "upcomingEvents": "Upcoming Events",
+      "scheduledCount": "{count} scheduled",
+      "noneUpcoming": "No upcoming events right now.",
+      "badgeUpcoming": "UPCOMING",
+      "addToCalendar": "Add to Calendar",
+      "pastEvents": "Past Events",
+      "postedCount": "{count} posted",
+      "badgePast": "PAST",
+      "status": {
+        "passed": "Passed",
+        "today": "🔥 Today",
+        "tomorrow": "Tomorrow",
+        "inDays": "In {count} days"
+      }
+    }
+  },
+  "no": {
+      "date": {
+        "months": ["Januar","Februar","Mars","April","Mai","Juni","Juli","August","September","Oktober","November","Desember"],
+        "daysShort": ["Man","Tir","Ons","Tor","Fre","Lør","Søn"]
+      },
+    "notFound": {
+      "title": "Siden finnes ikke",
+      "message": "Siden du leter etter finnes ikke."
+    },
+    "feedback": {
+      "title": "Tilbakemelding",
+      "subtitle": "Vi setter pris på din mening! Del dine tanker om klassene, instruktørene eller forslag til forbedringer.",
+      "anonymous": "Send anonymt",
+      "anonymousDesc": "Din identitet forblir privat",
+      "feedbackLabel": "Din tilbakemelding",
+      "placeholder": "Del dine tanker, forslag eller erfaringer med oss...",
+      "hint": "Vær så detaljert du vil. Vi setter pris på all tilbakemelding!",
+      "submit": "Send tilbakemelding",
+      "success": "Takk for din tilbakemelding!",
+      "privacy": "Din tilbakemelding er konfidensiell og hjelper oss med å forbedre tjenestene våre.",
+      "excerpt": "Del dine tanker, forslag eller erfaringer med oss.",
+      "ctaLink": "Gi tilbakemelding",
+      "namePlaceholder": "Skriv inn ditt fulle navn",
+      "emailPlaceholder": "din.epost@eksempel.no"
+    },
+    "nav": {
+      "home": "Hjem",
+  "about": "Om oss",
+  "classes": "Klasser",
+      "styles": "Stiler",
+      "gallery": "Galleri",
+  "news": "Nyheter",
+      "registration": "Registrering",
+      "faq": "FAQ",
+      "feedback": "Tilbakemelding",
+      "a11y": {
+        "switchToNo": "Bytt språk til norsk",
+        "switchToEn": "Bytt språk til engelsk",
+        "switchToPa": "Bytt språk til punjabi",
+        "chooseLanguage": "Velg språk",
+        "openMenu": "Åpne meny",
+        "closeMenu": "Lukk meny",
+        "home": "Surmedania hjem"
+      }
+    },
+    "hero": {
+      "tagline": "Opplev energien i punjabisk dans",
+      "viewClasses": "Se klasser",
+      "registerNow": "Registrer deg nå",
+      "description": "Lær Bhangra, Giddha og Bollywood — fra nybegynnere til avanserte. Bygg styrke, selvtillit og fellesskap gjennom dans.",
+      "features": {
+        "allLevels": "Alle nivåer",
+        "weeklyClasses": "Ukentlige klasser",
+        "expertInstructors": "Erfarne instruktører"
+      },
+      "imageAlt": "Dekorative elever danser — placeholder"
+    },
+    "common": {
+      "upcoming": "Kommende",
+      "all": "Alle",
+      "logoAlt": "Surmedania-logo",
+      "brandTagline": "Danseskole",
+      "event": "Hendelse",
+      "viewOnMap": "Se på kartet",
+      "gallery": "Galleri"
+    },
+    "styles": {
+      "title": "Dansestiler",
+      "subtitle": "Utforsk de tre hovedstilene vi underviser i – hver med sin unike historie, rytme og uttrykk.",
+      "characteristics": "Kjennetegn:",
+      "origin": "📜 Opprinnelse",
+      "keyMoves": "💫 Viktige bevegelser",
+      "music": "🎵 Musikk",
+      "attire": "👗 Antrekk",
+      "showLess": "Vis mindre",
+      "learnMore": "Lær mer",
+      "readyToDance": "Klar til å danse?",
+      "ctaSubtitle": "Bli med oss og opplev gleden ved tradisjonell og moderne indisk dans.",
+      "registerNow": "Registrer nå",
+      "viewSchedule": "Se tidsplan",
+      "names": {
+        "bhangra": "Bhangra",
+        "giddha": "Giddha",
+        "bollywood": "Bollywood"
+      }
+    },
+    "home": {
+      "schedulePreview": "Tidsplan oversikt",
+      "whyChoose": {
+        "title": "Hvorfor velge Surmedania?",
+        "subtitle": "Vi tilbyr mer enn bare danseklasser — vi bygger et fellesskap",
+        "allLevels": {
+          "title": "For alle nivåer",
+          "description": "Fra nybegynnere til avanserte — alle er velkomne til å lære og vokse sammen."
+        },
+        "culturalPride": {
+          "title": "Kulturell stolthet",
+          "description": "Lær autentisk Punjabi dans mens du feirer tradisjon og fellesskap."
+        },
+        "funEnergy": {
+          "title": "Gøy & energi",
+          "description": "Opplev gleden ved dans i et inkluderende miljø fullt av latter og rytme."
+        }
+      },
+      "stats": {
+        "yearsExperience": "År erfaring",
+        "activeMembers": "Aktive medlemmer",
+        "smilesShared": "Smil delt",
+        "memoriesCreated": "Minner skapt"
+      },
+      "cta": {
+        "title": "Klar til å begynne?",
+        "subtitle": "Bli med oss og opplev tradisjonen, energien og gleden ved Punjabi dans.",
+        "registerNow": "Registrer deg nå",
+        "viewClasses": "Se klasser"
+      }
+    },
+    "schedule": {
+      "adult": "Torsdag 19–21 — Voksne 16+",
+  "kids": "Søndag 15–17 — Barn under 16"
+    },
+    "about": {
+      "storyTitle": "Om Surmedania",
+      "tagline": "Der rytme møter kultur.",
+      "founderTitle": "Vår visjon",
+      "philosophyTitle": "Bevegelse, tradisjon og fellesskap",
+      "storyIntro": "Surmedania er en danseplattform grunnlagt av Angela Kaur, med en drøm om å bygge et sted der alle kan lære Bhangra — fra helt grunnleggende til avansert nivå.",
+      "founderBio": "Vår visjon er å gjøre punjabisk dans tilgjengelig for alle, uansett alder eller erfaring. Gjennom Surmedania ønsker vi å spre glede, selvtillit og kulturell stolthet — én takt om gangen.",
+      "philosophyText": "Hos Surmedania feirer vi bevegelse, tradisjon og fellesskap. Enten du blir med for å holde deg aktiv, knytte bånd til røttene dine, eller bare ha det gøy, vil du finne et inkluderende miljø fullt av energi, latter og rytme.",
+      "founderAlt": "Grunnlegger portrett",
+      "founderCaption": "Angela Kaur — Grunnlegger"
+    },
+    "classes": {
+      "location": "Ravinen, Rælingen",
+      "locationTitle": "Lokasjon",
+      "thursday": "Torsdag 19–21: Voksne 16+",
+  "sunday": "Søndag 15–17: Barn under 16",
+      "register": "Registrer nå",
+      "scheduleTitle": "Timeplan",
+      "classLabel": "Bhangra-klasse",
+      "prevMonth": "Forrige måned",
+      "nextMonth": "Neste måned",
+      "thursdayDay": "Torsdag",
+      "thursdayTime": "19:00 – 21:00",
+      "thursdayAudience": "Voksne 16+",
+      "sundayDay": "Søndag",
+      "sundayTime": "15:00 – 17:00",
+      "sundayAudience": "Barn under 16",
+      "todayButton": "I dag",
+      "legendAdults": "Voksne (Tor)",
+      "legendKids": "Barn (Søn)",
+      "legendEvents": "Spesielle hendelser",
+      "legendHolidays": "Helligdager",
+      "downloadFullCalendar": "Last ned full kalender"
+    },
+    "performances": {
+      "title": "Forestilling",
+      "relatedMedia": "Se relatert media"
+    },
+    "registration": {
+      "title": "Registrering",
+      "active": "Aktivt medlem",
+      "supported": "Støttemedlem",
+      "name": "Fullt navn",
+      "email": "E-post",
+      "phone": "Telefon",
+      "dob": "Fødselsdato",
+      "style": "Dansestil",
+      "styleSelect": "Velg stil...",
+      "styleBhangra": "Bhangra",
+      "styleGiddha": "Giddha",
+      "styleBollywood": "Bollywood",
+      "experience": "Erfaringsnivå",
+      "experienceSelect": "Velg nivå...",
+      "experienceBeginner": "Nybegynner",
+      "experienceIntermediate": "Middels",
+      "experienceAdvanced": "Avansert",
+      "experienceProfessional": "Profesjonell",
+      "comments": "Kommentarer (valgfritt)",
+      "relation": "Relasjon til student (valgfritt)",
+  "paymentOptions": "Betalingsalternativer (Vipps): 6 måneder: 349 NOK, 12 måneder: 449 NOK",
+  "classSelection": "Klasse valg",
+  "classSelect": "Velg klasse",
+  "submit": "Send",
+  "success": "Registrering vellykket!",
+      "paymentAmount": "Betalingsbeløp",
+      "selectPaymentAmount": "Velg betaling...",
+      "minimum": "minimum",
+      "supportedHelper": "Skriv inn et beløp på 50 NOK eller mer",
+      "selectPayment": "Vennligst velg betalingsbeløp",
+      "activePaymentError": "Aktive medlemmer må velge 349 eller 449 NOK",
+      "supportedPaymentError": "Støttemedlemmer må bidra minimum 50 NOK",
+      "fillRequired": "Vennligst fyll inn påkrevde felt",
+      "saveError": "Det oppstod et problem med å lagre registreringen. Prøv igjen senere.",
+      "activeBenefitsParticipate": "Delta i ukentlige danseklasser",
+      "activeBenefitsEvents": "Bli med på arrangementer og visninger",
+      "activeBenefitsWorkshops": "Tilgang til eksklusive workshops",
+      "activeBenefitsSpond": "Bli med i vår Spond-gruppe",
+      "activeBenefitsUpdates": "Motta jevnlige oppdateringer og nyheter",
+      "locationLabel": "Sted:",
+      "classesLabel": "Klasser:",
+      "classDays": "Torsdag & Søndag",
+      "redirectSpond": "Etter betaling blir du sendt videre til vår Spond-gruppe.",
+      "supportedBenefitsMission": "Støtt danseskolens visjon",
+      "supportedBenefitsUpdates": "Motta jevnlige oppdateringer og nyhetsbrev",
+      "supportedBenefitsNewsEvents": "Hold deg oppdatert via Nyheter og Hendelser",
+      "supportedBenefitsEarly": "Tidlig tilgang til kunngjøringer om arrangementer",
+      "supportedBenefitsCommunity": "Hjelp oss å utvikle dansemiljøet",
+      "supportHelp": "Din støtte hjelper oss å fortsette vår lidenskap for dans og kultur."
+    },
+    "confirm": {
+      "title": "Takk — registrering mottatt",
+      "message": "Vi har registrert din påmelding. Vennligst velg hvordan du vil fortsette:",
+      "selectPayment": "Velg Betaling",
+      "payVipps": "Betal med Vipps",
+      "openSpond": "Åpne Spond-gruppe",
+      "returnHome": "Tilbake til hjem",
+      "months": "måneder",
+      "perMonth": "Per måned",
+      "bestValue": "BESTE VERDI",
+      "vippsInstruction": "Send betaling til Vipps-nummer:",
+      "vippsMessage": "Inkluder navnet ditt i meldingen",
+      "customAmount": "Skriv inn beløp",
+      "continueToPayment": "Fortsett til betaling",
+      "selectPaymentError": "Vennligst velg et betalingsalternativ",
+      "minimumError": "Minimumsbetaling er 50 NOK"
+    },
+    "faq": {
+      "q1": "Hvem kan bli med i Surmedania Dance School?",
+      "q2": "Når er klassene?",
+      "q3": "Hvor holdes klassene?",
+      "q4": "Hvor mye koster det?",
+      "q5": "Hvordan registrerer jeg meg?",
+      "q6": "Hva om jeg er forelder eller familiemedlem?",
+      "q7": "Kan jeg bytte mellom klasser eller pakker?",
+      "q8": "Hvor kan jeg parkere?",
+      "qWear": "Hva skal jeg ha på meg?",
+      "qPerform": "Opptrer dere på arrangementer?",
+      "qBook": "Kan jeg booke Surmedania til private arrangementer?",
+      "h1Title": "Ofte Stilte Spørsmål",
+      "h1Intro": "Finn svar på vanlige spørsmål om våre klasser, medlemskap og praktisk informasjon. For ytterligere henvendelser, vennligst kontakt oss.",
+      "sectionGeneral": "Generelle Spørsmål",
+      "sectionMembership": "Medlemskap & Registrering",
+      "sectionPractical": "Praktisk Informasjon",
+      "ctaTitle": "Ytterligere Spørsmål?",
+      "ctaText": "Kontakt oss hvis du har flere spørsmål.",
+      "ctaContact": "Kontakt oss",
+      "ctaRegister": "Registrer deg",
+      "a1": "Alle er velkomne — voksne og barn. Ingen forkunnskaper kreves.",
+      "a2": "Torsdag 19:00–21:00 for voksne. Søndag 15:00–17:00 for barn.",
+      "a3": "Alle klasser er på Ravinen i Rælingen. Se Klasser-siden for veibeskrivelse og kart.",
+      "a4": "Aktivt medlemskap inkluderer klasser. Støttemedlemskap er for familie og støttespillere. Se Registrering for priser og betalingsalternativer.",
+      "a5": "Registrer via siden Registrering. Fyll inn opplysningene dine, velg klassetid og medlemskapstype, og følg betalingsinstruksjonene. Du får en bekreftelse når betalingen er registrert.",
+      "a6": "Ja. Foreldre og familie kan registrere seg som støttemedlemmer. For å registrere et barn, velg 'Aktivt medlem' og riktig aldersgruppe. Foreldre er velkomne til å observere klasser og være med på arrangementer.",
+      "a7": "Ja, kontakt oss via e-post eller tilbakemeldingsskjema for å bytte klasser eller justere medlemskapet. Endringer avhenger av tilgjengelighet.",
+      "a8": "Gratis parkering finnes ved Marikollen Kultursal og på parkeringsplassen ved fotballbanen i nærheten. Det er gratis når du registrerer i EasyPark-appen. Se Klasser-siden for full adresse og kart.",
+      "aWear": "Bruk komfortable treningsklær og sokker (vi danser uten sko). Unngå jeans. Ta med vann.",
+      "aPerform": "Ja, vi opptrer jevnlig på kulturelle arrangementer og festivaler. Medlemmer kan delta i oppvisninger og konkurranser. Se siden Nyheter og hendelser for kommende opptredener.",
+      "aBook": "Ja! Vi tilbyr private dansetimer og opptredener for bryllup, bursdagsfester, firmaarrangementer og andre spesielle anledninger. Kontakt oss med dine arrangementsdetaljer for en tilpasset pakke."
+    },
+    "support": {
+      "title": "Støtt oss",
+      "description": "Bli støttemedlem og hjelp oss å vokse som dansesamfunn.",
+      "now": "Støtt nå"
+    },
+    "footer": {
+      "contact": "Kontakt",
+      "address": "Ravinen, Rælingen",
+      "credit": "Drevet av Jugad Boparai",
+      "opensNewTab": "(åpnes i ny fane)",
+      "follow": "Følg oss",
+      "emailLabel": "E-post",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "phoneLabel": "Telefon"
+      ,"rightsReserved": "Alle rettigheter forbeholdt."
+    }
+    ,
+    "news": {
+      "title": "Nyheter & Hendelser",
+      "subtitle": "Hold deg oppdatert på nyheter, kommende arrangementer og høydepunkter fra Surmedania.",
+      "nextEvent": "Neste Hendelse",
+      "upcomingEvents": "Kommende Hendelser",
+      "scheduledCount": "{count} planlagt",
+      "noneUpcoming": "Ingen kommende hendelser akkurat nå.",
+      "badgeUpcoming": "KOMMENDE",
+      "addToCalendar": "Legg i kalender",
+      "pastEvents": "Tidligere Hendelser",
+      "postedCount": "{count} publisert",
+      "badgePast": "TIDLIGERE",
+      "status": {
+        "passed": "Passert",
+        "today": "🔥 I dag",
+        "tomorrow": "I morgen",
+        "inDays": "Om {count} dager"
+      }
+    }
+  },
+  "pa": {
+    "confirm": {
+      "title": "ਧੰਨਵਾਦ — ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਪ੍ਰਾਪਤ",
+      "message": "ਅਸੀਂ ਤੁਹਾਡੀ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਦਰਜ ਕਰ ਲਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਅੱਗੇ ਵਧਣ ਲਈ ਵਿਕਲਪ ਚੁਣੋ:",
+      "selectPayment": "ਭੁਗਤਾਨ ਚੁਣੋ",
+      "payVipps": "Vipps ਨਾਲ ਭੁਗਤਾਨ ਕਰੋ",
+      "openSpond": "Spond ਗਰੁੱਪ ਖੋਲ੍ਹੋ",
+      "returnHome": "ਘਰ ਵਾਪਸ ਜਾਓ",
+      "months": "ਮਹੀਨੇ",
+      "perMonth": "ਪ੍ਰਤੀ ਮਹੀਨਾ",
+      "bestValue": "ਸਭ ਤੋਂ ਵਧੀਆ",
+      "vippsInstruction": "Vipps ਨੰਬਰ ਤੇ ਭੁਗਤਾਨ ਭੇਜੋ:",
+      "vippsMessage": "ਸੁਨੇਹੇ ਵਿੱਚ ਆਪਣਾ ਨਾਮ ਲਿਖੋ",
+      "customAmount": "ਰਕਮ ਦਰਜ ਕਰੋ",
+      "continueToPayment": "ਭੁਗਤਾਨ ਵੱਲ ਜਾਰੀ ਰੱਖੋ",
+      "selectPaymentError": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਭੁਗਤਾਨ ਵਿਕਲਪ ਚੁਣੋ",
+      "minimumError": "ਘੱਟੋ-ਘੱਟ ਭੁਗਤਾਨ 50 NOK ਹੈ"
+    },
+      "date": {
+        "months": ["ਜਨਵਰੀ","ਫਰਵਰੀ","ਮਾਰਚ","ਅਪ੍ਰੈਲ","ਮਈ","ਜੂਨ","ਜੁਲਾਈ","ਅਗਸਤ","ਸਤੰਬਰ","ਅਕਤੂਬਰ","ਨਵੰਬਰ","ਦਸੰਬਰ"],
+        "daysShort": ["ਸੋਮ","ਮੰਗਲ","ਬੁੱਧ","ਵੀਰ","ਸ਼ੁੱਕਰ","ਸ਼ਨੀ","ਐਤ"]
+      },
+    "notFound": {
+      "title": "ਪੰਨਾ ਨਹੀਂ ਮਿਲਿਆ",
+      "message": "ਜੋ ਪੰਨਾ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ ਉਹ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
+    },
+    "feedback": {
+      "title": "ਫੀਡਬੈਕ",
+      "subtitle": "ਅਸੀਂ ਤੁਹਾਡੀ ਰਾਏ ਦੀ ਕਦਰ ਕਰਦੇ ਹਾਂ! ਕਲਾਸਾਂ, ਇੰਸਟ੍ਰਕਟਰਾਂ ਜਾਂ ਸੁਧਾਰ ਲਈ ਸੁਝਾਵਾਂ ਬਾਰੇ ਆਪਣੇ ਵਿਚਾਰ ਸਾਂਝੇ ਕਰੋ।",
+      "anonymous": "ਗੁਮਨਾਮ ਭੇਜੋ",
+      "anonymousDesc": "ਤੁਹਾਡੀ ਪਛਾਣ ਗੁਪਤ ਰਹੇਗੀ",
+      "feedbackLabel": "ਤੁਹਾਡਾ ਫੀਡਬੈਕ",
+      "placeholder": "ਸਾਡੇ ਨਾਲ ਆਪਣੇ ਵਿਚਾਰ, ਸੁਝਾਅ ਜਾਂ ਤਜਰਬੇ ਸਾਂਝੇ ਕਰੋ...",
+      "hint": "ਜਿੰਨਾ ਵੀ ਵਿਸਥਾਰ ਨਾਲ ਦੱਸ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਹਰ ਫੀਡਬੈਕ ਦੀ ਕਦਰ ਕਰਦੇ ਹਾਂ!",
+      "submit": "ਫੀਡਬੈਕ ਭੇਜੋ",
+      "success": "ਤੁਹਾਡੇ ਫੀਡਬੈਕ ਲਈ ਧੰਨਵਾਦ!",
+      "privacy": "ਤੁਹਾਡਾ ਫੀਡਬੈਕ ਗੁਪਤ ਹੈ ਅਤੇ ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ ਨੂੰ ਬਿਹਤਰ ਬਣਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।",
+      "excerpt": "ਸਾਡੇ ਨਾਲ ਆਪਣੇ ਵਿਚਾਰ, ਸੁਝਾਅ ਜਾਂ ਤਜਰਬੇ ਸਾਂਝੇ ਕਰੋ।",
+      "ctaLink": "ਫੀਡਬੈਕ ਦਿਓ",
+      "namePlaceholder": "ਆਪਣਾ ਪੂਰਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+      "emailPlaceholder": "ਤੁਹਾਡਾ.ਈਮੇਲ@ਉਦਾਹਰਣ.com"
+    },
+    "nav": {
+      "home": "ਘਰ",
+      "about": "ਸਾਡੇ ਬਾਰੇ",
+      "classes": "ਕਲਾਸਾਂ",
+      "styles": "ਸ਼ੈਲੀਆਂ",
+      "gallery": "ਗੈਲਰੀ",
+      "news": "ਖ਼ਬਰਾਂ",
+      "registration": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ",
+      "faq": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਂਦੇ ਸਵਾਲ",
+      "feedback": "ਫੀਡਬੈਕ",
+      "a11y": {
+        "switchToNo": "ਭਾਸ਼ਾ ਨਾਰਵੇਜੀਅਨ ਤੇ ਬਦਲੋ",
+        "switchToEn": "ਭਾਸ਼ਾ ਅੰਗਰੇਜ਼ੀ ਤੇ ਬਦਲੋ",
+        "switchToPa": "ਭਾਸ਼ਾ ਪੰਜਾਬੀ ਤੇ ਬਦਲੋ",
+        "chooseLanguage": "ਭਾਸ਼ਾ ਚੁਣੋ",
+        "openMenu": "ਮੇਨੂ ਖੋਲ੍ਹੋ",
+        "closeMenu": "ਮੇਨੂ ਬੰਦ ਕਰੋ",
+        "home": "Surmedania ਮੁੱਖ ਪੰਨਾ"
+      }
+    },
+    "hero": {
+      "tagline": "ਪੰਜਾਬੀ ਡਾਂਸ ਦੀ ਊਰਜਾ ਦਾ ਅਨੁਭਵ ਕਰੋ",
+      "viewClasses": "ਕਲਾਸਾਂ ਵੇਖੋ",
+      "registerNow": "ਹੁਣੇ ਰਜਿਸਟਰ ਕਰੋ",
+      "description": "ਭੰਗੜਾ, ਗਿੱਧਾ ਅਤੇ ਬਾਲੀਵੁੱਡ — ਸ਼ੁਰੂਆਤੀ ਤੋਂ ਲੈ ਕੇ ਉੱਨਤ ਤੱਕ। ਡਾਂਸ ਰਾਹੀਂ ਤਾਕਤ, ਆਤਮ‑ਵਿਸ਼ਵਾਸ ਅਤੇ ਭਾਈਚਾਰਾ ਬਣਾਓ।",
+      "features": {
+        "allLevels": "ਸਾਰੇ ਪੱਧਰ",
+        "weeklyClasses": "ਹਫ਼ਤਾਵਾਰੀ ਕਲਾਸਾਂ",
+        "expertInstructors": "ਮਾਹਰ ਇੰਸਟ੍ਰਕਟਰ"
+      },
+      "imageAlt": "ਸਜਾਵਟੀ ਵਿਦਿਆਰਥੀ ਨੱਚਦੇ — placeholder"
+    },
+    "common": {
+      "upcoming": "ਆਉਣ ਵਾਲਾ",
+      "all": "ਸਭ",
+      "logoAlt": "Surmedania ਲੋਗੋ",
+      "brandTagline": "ਡਾਂਸ ਸਕੂਲ",
+      "event": "ਸਮਾਗਮ",
+      "viewOnMap": "ਨਕਸ਼ੇ ਤੇ ਵੇਖੋ",
+      "gallery": "ਗੈਲਰੀ"
+    },
+    "styles": {
+      "title": "ਡਾਂਸ ਸਟਾਈਲਾਂ",
+      "subtitle": "ਤਿੰਨ ਮੁੱਖ ਸ਼ੈਲੀਆਂ ਦੀ ਖੋਜ ਕਰੋ ਜੋ ਅਸੀਂ ਸਿਖਾਉਂਦੇ ਹਾਂ - ਹਰ ਇੱਕ ਦਾ ਆਪਣਾ ਵਿਲੱਖਣ ਇਤਿਹਾਸ, ਤਾਲ ਅਤੇ ਪ੍ਰਗਟਾਵਾ।",
+      "characteristics": "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ:",
+      "origin": "📜 ਮੂਲ",
+      "keyMoves": "💫 ਮੁੱਖ ਮੂਵਾਂ",
+      "music": "🎵 ਸੰਗੀਤ",
+      "attire": "👗 ਪਹਿਰਾਵਾ",
+      "showLess": "ਘੱਟ ਵਿਖਾਓ",
+      "learnMore": "ਹੋਰ ਪੜ੍ਹੋ",
+      "readyToDance": "ਨੱਚਣ ਲਈ ਤਿਆਰ?",
+      "ctaSubtitle": "ਸਾਡੇ ਨਾਲ ਜੁੜੋ ਅਤੇ ਰਵਾਇਤੀ ਅਤੇ ਆਧੁਨਿਕ ਭਾਰਤੀ ਡਾਂਸ ਦੀ ਖੁਸ਼ੀ ਦਾ ਅਨੁਭਵ ਕਰੋ।",
+      "registerNow": "ਹੁਣੇ ਰਜਿਸਟਰ ਕਰੋ",
+      "viewSchedule": "ਸਮਾਂ-ਸਾਰਣੀ ਵੇਖੋ",
+      "names": {
+        "bhangra": "ਭੰਗੜਾ",
+        "giddha": "ਗਿੱਧਾ",
+        "bollywood": "ਬਾਲੀਵੁੱਡ"
+      }
+    },
+    "home": {
+      "schedulePreview": "ਸਮਾਂ-ਸਾਰਣੀ ਝਲਕ",
+      "whyChoose": {
+        "title": "ਸੁਰਮੇਦਾਨੀਆ ਨੂੰ ਕਿਉਂ ਚੁਣੋ?",
+        "subtitle": "ਅਸੀਂ ਸਿਰਫ਼ ਡਾਂਸ ਕਲਾਸਾਂ ਤੋਂ ਵੱਧ ਪੇਸ਼ ਕਰਦੇ ਹਾਂ — ਅਸੀਂ ਇੱਕ ਭਾਈਚਾਰਾ ਬਣਾਉਂਦੇ ਹਾਂ",
+        "allLevels": {
+          "title": "ਸਾਰੇ ਪੱਧਰਾਂ ਲਈ",
+          "description": "ਸ਼ੁਰੂਆਤੀ ਤੋਂ ਲੈ ਕੇ ਉੱਨਤ ਤੱਕ — ਹਰ ਕੋਈ ਸਿੱਖਣ ਅਤੇ ਵਧਣ ਲਈ ਸੁਆਗਤ ਹੈ।"
+        },
+        "culturalPride": {
+          "title": "ਸੱਭਿਆਚਾਰਕ ਮਾਣ",
+          "description": "ਪਰੰਪਰਾ ਅਤੇ ਭਾਈਚਾਰੇ ਦਾ ਜਸ਼ਨ ਮਨਾਉਂਦੇ ਹੋਏ ਅਸਲੀ ਪੰਜਾਬੀ ਡਾਂਸ ਸਿੱਖੋ।"
+        },
+        "funEnergy": {
+          "title": "ਮਜ਼ਾ ਅਤੇ ਊਰਜਾ",
+          "description": "ਹਾਸੇ ਅਤੇ ਤਾਲ ਨਾਲ ਭਰਪੂਰ ਸ਼ਾਮਲ ਵਾਤਾਵਰਣ ਵਿੱਚ ਡਾਂਸ ਦੀ ਖੁਸ਼ੀ ਦਾ ਅਨੁਭਵ ਕਰੋ।"
+        }
+      },
+      "stats": {
+        "yearsExperience": "ਸਾਲਾਂ ਦਾ ਤਜਰਬਾ",
+        "activeMembers": "ਸਰਗਰਮ ਮੈਂਬਰ",
+        "smilesShared": "ਸਾਂਝੀਆਂ ਮੁਸਕਾਨਾਂ",
+        "memoriesCreated": "ਯਾਦਾਂ ਬਣਾਈਆਂ"
+      },
+      "cta": {
+        "title": "ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਤਿਆਰ?",
+        "subtitle": "ਸਾਡੇ ਨਾਲ ਜੁੜੋ ਅਤੇ ਪੰਜਾਬੀ ਡਾਂਸ ਦੀ ਪਰੰਪਰਾ, ਊਰਜਾ ਅਤੇ ਖੁਸ਼ੀ ਦਾ ਅਨੁਭਵ ਕਰੋ।",
+        "registerNow": "ਹੁਣੇ ਰਜਿਸਟਰ ਕਰੋ",
+        "viewClasses": "ਕਲਾਸਾਂ ਵੇਖੋ"
+      }
+    },
+    "schedule": {
+      "adult": "ਵੀਰਵਾਰ 19–21 — ਬਾਲਗ 16+",
+      "kids": "ਐਤਵਾਰ 15–17 — 16 ਸਾਲ ਤੋਂ ਘੱਟ ਉਮਰ ਦੇ ਬੱਚੇ"
+    },
+    "about": {
+      "storyTitle": "ਸੁਰਮੇਦਾਨੀਆ ਬਾਰੇ",
+      "tagline": "ਜਿੱਥੇ ਤਾਲ ਸੱਭਿਆਚਾਰ ਨੂੰ ਮਿਲਦੀ ਹੈ।",
+      "founderTitle": "ਸਾਡੀ ਦ੍ਰਿਸ਼ਟੀ",
+      "philosophyTitle": "ਗਤੀ, ਪਰੰਪਰਾ, ਭਾਈਚਾਰਾ",
+      "storyIntro": "ਸੁਰਮੇਦਾਨੀਆ ਇੱਕ ਡਾਂਸ ਪਲੇਟਫਾਰਮ ਹੈ ਜੋ ਅੰਜਲਾ ਕੌਰ ਦੁਆਰਾ ਸਥਾਪਿਤ ਕੀਤਾ ਗਿਆ ਹੈ, ਇੱਕ ਸਪਨੇ ਨਾਲ ਕਿ ਹਰ ਕੋਈ ਭੰਗੜਾ ਸਿੱਖ ਸਕੇ — ਮੁੱਢਲੀ ਤੋਂ ਲੈ ਕੇ ਉੱਨਤ ਪੱਧਰ ਤੱਕ।",
+      "founderBio": "ਸਾਡੀ ਦ੍ਰਿਸ਼ਟੀ ਪੰਜਾਬੀ ਡਾਂਸ ਨੂੰ ਹਰ ਕਿਸੇ ਲਈ ਸੁਲੱਭ ਬਣਾਉਣਾ ਹੈ, ਚਾਹੇ ਉਹਨਾਂ ਦੀ ਉਮਰ ਜਾਂ ਤਜਰਬਾ ਕੋਈ ਵੀ ਹੋਵੇ। ਸੁਰਮੇਦਾਨੀਆ ਦੁਆਰਾ, ਅਸੀਂ ਖੁਸ਼ੀ, ਆਤਮ-ਵਿਸ਼ਵਾਸ ਅਤੇ ਸੱਭਿਆਚਾਰਕ ਮਾਣ ਫੈਲਾਉਣਾ ਚਾਹੁੰਦੇ ਹਾਂ — ਇੱਕ ਸਮੇਂ ਵਿੱਚ ਇੱਕ ਧੜਕਣ।",
+      "philosophyText": "ਸੁਰਮੇਦਾਨੀਆ ਵਿੱਚ, ਅਸੀਂ ਗਤੀ, ਪਰੰਪਰਾ ਅਤੇ ਭਾਈਚਾਰੇ ਦਾ ਜਸ਼ਨ ਮਨਾਉਂਦੇ ਹਾਂ। ਭਾਵੇਂ ਤੁਸੀਂ ਸਰਗਰਮ ਰਹਿਣ ਲਈ, ਆਪਣੀਆਂ ਜੜ੍ਹਾਂ ਨਾਲ ਜੁੜਨ ਲਈ, ਜਾਂ ਸਿਰਫ਼ ਮਜ਼ੇ ਲਈ ਸ਼ਾਮਲ ਹੋ ਰਹੇ ਹੋ, ਤੁਹਾਨੂੰ ਊਰਜਾ, ਹਾਸੇ ਅਤੇ ਤਾਲ ਨਾਲ ਭਰਪੂਰ ਸੁਆਗਤਯੋਗ ਮਾਹੌਲ ਮਿਲੇਗਾ।",
+      "founderAlt": "ਸੰਸਥਾਪਕ ਦੀ ਤਸਵੀਰ",
+      "founderCaption": "ਅੰਜਲਾ ਕੌਰ — ਸੰਸਥਾਪਕ"
+    },
+    "classes": {
+      "location": "ਰਾਵੀਨੇਨ, ਰੈਲਿੰਗਨ",
+      "locationTitle": "ਸਥਾਨ",
+      "thursday": "ਵੀਰਵਾਰ 19–21: ਬਾਲਗ 16+",
+      "sunday": "ਐਤਵਾਰ 15–17: 16 ਸਾਲ ਤੋਂ ਘੱਟ ਉਮਰ ਦੇ ਬੱਚੇ",
+      "register": "ਹੁਣੇ ਰਜਿਸਟਰ ਕਰੋ",
+      "scheduleTitle": "ਕਲਾਸ ਸਮਾਂ-ਸਾਰਣੀ",
+      "classLabel": "ਭਾਂਗੜਾ ਕਲਾਸ",
+      "prevMonth": "ਪਿਛਲਾ ਮਹੀਨਾ",
+      "nextMonth": "ਅਗਲਾ ਮਹੀਨਾ",
+      "thursdayDay": "ਵੀਰਵਾਰ",
+      "thursdayTime": "19:00 – 21:00",
+      "thursdayAudience": "ਬਾਲਗ 16+",
+      "sundayDay": "ਐਤਵਾਰ",
+      "sundayTime": "15:00 – 17:00",
+      "sundayAudience": "16 ਸਾਲ ਤੋਂ ਘੱਟ ਉਮਰ ਦੇ ਬੱਚੇ",
+      "todayButton": "ਅੱਜ",
+      "legendAdults": "ਬਾਲਗ (ਵੀਰ)",
+      "legendKids": "ਬੱਚੇ (ਐਤ)",
+      "legendEvents": "ਖਾਸ ਸਮਾਗਮ",
+      "legendHolidays": "ਛੁੱਟੀਆਂ",
+      "downloadFullCalendar": "ਪੂਰਾ ਕੈਲੰਡਰ ਡਾਊਨਲੋਡ ਕਰੋ"
+    },
+    "performances": {
+      "title": "ਪ੍ਰਦਰਸ਼ਨ",
+      "relatedMedia": "ਸੰਬੰਧਤ ਮੀਡੀਆ ਵੇਖੋ"
+    },
+    "registration": {
+      "title": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ",
+      "active": "ਸਰਗਰਮ ਮੈਂਬਰ",
+      "supported": "ਸਹਾਇਕ ਮੈਂਬਰ",
+      "name": "ਪੂਰਾ ਨਾਮ",
+      "email": "ਈਮੇਲ",
+      "phone": "ਫ਼ੋਨ",
+      "dob": "ਜਨਮ ਮਿਤੀ",
+      "style": "ਡਾਂਸ ਸ਼ੈਲੀ",
+      "styleSelect": "ਸ਼ੈਲੀ ਚੁਣੋ...",
+      "styleBhangra": "ਭੰਗੜਾ",
+      "styleGiddha": "ਗਿੱਧਾ",
+      "styleBollywood": "ਬਾਲੀਵੁੱਡ",
+      "experience": "ਤਜਰਬੇ ਦਾ ਪੱਧਰ",
+      "experienceSelect": "ਪੱਧਰ ਚੁਣੋ...",
+      "experienceBeginner": "ਸ਼ੁਰੂਆਤੀ",
+      "experienceIntermediate": "ਦਰਮਿਆਨਾ",
+      "experienceAdvanced": "ਉੱਨਤ",
+      "experienceProfessional": "ਪੇਸ਼ਾਵਰ",
+      "comments": "ਟਿੱਪਣੀਆਂ (ਚੋਣਵਾਂ)",
+      "relation": "ਵਿਦਿਆਰਥੀ ਨਾਲ ਸੰਬੰਧ (ਚੋਣਵਾਂ)",
+      "paymentOptions": "ਭੁਗਤਾਨ ਵਿਕਲਪ (Vipps): 6 ਮਹੀਨੇ: 349 NOK, 12 ਮਹੀਨੇ: 449 NOK",
+      "classSelection": "ਕਲਾਸ ਚੋਣ",
+      "classSelect": "ਕਲਾਸ ਚੁਣੋ",
+      "submit": "ਭੇਜੋ",
+      "success": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਸਫਲ!",
+      "paymentAmount": "ਭੁਗਤਾਨ ਰਕਮ",
+      "selectPaymentAmount": "ਭੁਗਤਾਨ ਚੁਣੋ...",
+      "minimum": "ਘੱਟੋ-ਘੱਟ",
+      "supportedHelper": "50 NOK ਜਾਂ ਵੱਧ ਕੋਈ ਵੀ ਰਕਮ ਦਰਜ ਕਰੋ",
+      "selectPayment": "ਕਿਰਪਾ ਕਰਕੇ ਭੁਗਤਾਨ ਰਕਮ ਚੁਣੋ",
+      "activePaymentError": "ਸਰਗਰਮ ਮੈਂਬਰਾਂ ਨੂੰ 349 ਜਾਂ 449 NOK ਚੁਣਨਾ ਲਾਜ਼ਮੀ ਹੈ",
+      "supportedPaymentError": "ਸਹਾਇਕ ਮੈਂਬਰਾਂ ਨੂੰ ਘੱਟੋ-ਘੱਟ 50 NOK ਯੋਗਦਾਨ ਦੇਣਾ ਲਾਜ਼ਮੀ ਹੈ",
+      "fillRequired": "ਕਿਰਪਾ ਕਰਕੇ ਲੋੜੀਂਦੇ ਖੇਤਰ ਭਰੋ",
+      "saveError": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਸੰਭਾਲਦੇ ਸਮੇਂ ਸਮੱਸਿਆ ਆਈ। ਬਾਅਦ ਵਿੱਚ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+      "activeBenefitsParticipate": "ਹਫ਼ਤਾਵਾਰੀ ਡਾਂਸ ਕਲਾਸਾਂ ਵਿੱਚ ਹਿੱਸਾ ਲਵੋ",
+      "activeBenefitsEvents": "ਸਮਾਗਮਾਂ ਅਤੇ ਸ਼ੋਅਕੇਸ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+      "activeBenefitsWorkshops": "ਖਾਸ ਵਰਕਸ਼ਾਪਾਂ ਦੀ ਪਹਿਲ ਮਿਲੋ",
+      "activeBenefitsSpond": "ਸਾਡੀ Spond ਕਮਿਊਨਿਟੀ ਗਰੁੱਪ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
+      "activeBenefitsUpdates": "ਨਿਯਮਿਤ ਅਪਡੇਟ ਅਤੇ ਖ਼ਬਰਾਂ ਪ੍ਰਾਪਤ ਕਰੋ",
+      "locationLabel": "ਸਥਾਨ:",
+      "classesLabel": "ਕਲਾਸਾਂ:",
+      "classDays": "ਵੀਰਵਾਰ ਅਤੇ ਐਤਵਾਰ",
+      "redirectSpond": "ਭੁਗਤਾਨ ਤੋਂ ਬਾਅਦ ਤੁਸੀਂ ਸਾਡੇ Spond ਗਰੁੱਪ ਵੱਲ ਭੇਜੇ ਜਾਵੋਗੇ।",
+      "supportedBenefitsMission": "ਸਾਡੇ ਡਾਂਸ ਸਕੂਲ ਦੇ ਮਿਸ਼ਨ ਦਾ ਸਮਰਥਨ ਕਰੋ",
+      "supportedBenefitsUpdates": "ਨਿਯਮਿਤ ਅਪਡੇਟ ਅਤੇ ਨਿਊਜ਼ਲੈਟਰ ਪ੍ਰਾਪਤ ਕਰੋ",
+      "supportedBenefitsNewsEvents": "ਖ਼ਬਰਾਂ ਅਤੇ ਸਮਾਗਮਾਂ ਰਾਹੀਂ ਜਾਣਕਾਰੀ ਰੱਖੋ",
+      "supportedBenefitsEarly": "ਸਮਾਗਮ ਘੋਸ਼ਣਾਵਾਂ ਲਈ ਪਹਿਲਾਂ ਪਹੁੰਚ",
+      "supportedBenefitsCommunity": "ਡਾਂਸ ਭਾਈਚਾਰੇ ਨੂੰ ਵਧਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰੋ",
+      "supportHelp": "ਤੁਹਾਡਾ ਸਮਰਥਨ ਸਾਨੂੰ ਡਾਂਸ ਅਤੇ ਸਭਿਆਚਾਰ ਲਈ ਆਪਣਾ ਜ਼ਜ਼ਬਾ ਜਾਰੀ ਰੱਖਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ।"
+    },
+    "faq": {
+      "q1": "ਕੀ ਮੈਂ ਸ਼ਾਮਲ ਹੋ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",
+      "q2": "ਕਲਾਸਾਂ ਕਦੋਂ ਹਨ?",
+      "q3": "ਕਲਾਸਾਂ ਕਿੱਥੇ ਹੁੰਦੀਆਂ ਹਨ?",
+      "q4": "ਸਦੱਸਤਾ ਕਿਸਮਾਂ ਵਿੱਚ ਕੀ ਅੰਤਰ ਹੈ?",
+      "q5": "ਮੈਂ ਕਿਵੇਂ ਰਜਿਸਟਰ ਕਰਾਂ?",
+      "q6": "ਕੀ ਮੈਂ ਆਪਣੇ ਬੱਚੇ ਨੂੰ ਰਜਿਸਟਰ ਕਰ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",
+      "q7": "ਕੀ ਮੈਂ ਕਲਾਸਾਂ ਜਾਂ ਪੈਕੇਜਾਂ ਵਿੱਚ ਬਦਲਾਅ ਕਰ ਸਕਦਾ/ਸਕਦੀ ਹਾਂ?",
+      "q8": "ਪਾਰਕਿੰਗ ਕਿੱਥੇ ਹੈ?",
+      "qWear": "ਮੈਨੂੰ ਕੀ ਪਹਿਨਣਾ ਚਾਹੀਦਾ ਹੈ?",
+      "qPerform": "ਕੀ ਤੁਸੀਂ ਸਮਾਗਮਾਂ ‘ਤੇ ਪ੍ਰਦਰਸ਼ਨ ਕਰਦੇ ਹੋ?",
+      "qBook": "ਕੀ ਮੈਂ ਨਿੱਜੀ ਸਮਾਰੋਹਾਂ ਲਈ Surmedania ਬੁੱਕ ਕਰ ਸਕਦਾ ਹਾਂ?",
+      "h1Title": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਣ ਵਾਲੇ ਸਵਾਲ",
+      "h1Intro": "ਸਾਡੀਆਂ ਕਲਾਸਾਂ, ਮੈਂਬਰਸ਼ਿਪ ਅਤੇ ਵਿਹਾਰਕ ਜਾਣਕਾਰੀ ਬਾਰੇ ਆਮ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਲੱਭੋ। ਹੋਰ ਪੁੱਛਗਿੱਛ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+      "sectionGeneral": "ਆਮ ਸਵਾਲ",
+      "sectionMembership": "ਮੈਂਬਰਸ਼ਿਪ ਅਤੇ ਰਜਿਸਟ੍ਰੇਸ਼ਨ",
+      "sectionPractical": "ਵਿਹਾਰਕ ਜਾਣਕਾਰੀ",
+      "ctaTitle": "ਵਧੀਕ ਪੁੱਛਗਿੱਛ?",
+      "ctaText": "ਜੇ ਹੋਰ ਸਵਾਲ ਹਨ ਤਾਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+      "ctaContact": "ਸੰਪਰਕ ਕਰੋ",
+      "ctaRegister": "ਰਜਿਸਟਰ ਕਰੋ",
+      "a1": "ਹਰ ਕੋਈ ਸਵਾਗਤ ਹੈ — ਬਾਲਗ ਅਤੇ ਬੱਚੇ। ਕੋਈ ਤਜਰਬੇ ਦੀ ਲੋੜ ਨਹੀਂ।",
+      "a2": "ਵੀਰਵਾਰ 19:00–21:00 ਬਾਲਗਾਂ ਲਈ। ਐਤਵਾਰ 15:00–17:00 ਬੱਚਿਆਂ ਲਈ।",
+      "a3": "ਸਾਰੀਆਂ ਕਲਾਸਾਂ Ravinen ਵਿੱਚ Rælingen ਵਿਖੇ ਹਨ। ਪਤੇ ਅਤੇ ਨਕਸ਼ੇ ਲਈ ਸਾਡਾ ਕਲਾਸਾਂ ਪੰਨਾ ਵੇਖੋ।",
+      "a4": "ਸਰਗਰਮ ਮੈਂਬਰਸ਼ਿਪ ਵਿੱਚ ਕਲਾਸਾਂ ਸ਼ਾਮਲ ਹਨ। ਸਹਾਇਕ ਮੈਂਬਰਸ਼ਿਪ ਪਰਿਵਾਰ ਅਤੇ ਸਮਰਥਕਾਂ ਲਈ ਹੈ। ਕੀਮਤਾਂ ਅਤੇ ਭੁਗਤਾਨ ਵਿਕਲਪਾਂ ਲਈ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਪੰਨਾ ਵੇਖੋ।",
+      "a5": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਪੰਨੇ ਰਾਹੀਂ ਰਜਿਸਟਰ ਕਰੋ। ਆਪਣੇ ਵੇਰਵੇ ਦਰਜ ਕਰੋ, ਆਪਣੀ ਕਲਾਸ ਦਾ ਸਮਾਂ ਅਤੇ ਮੈਂਬਰਸ਼ਿਪ ਦੀ ਕਿਸਮ ਚੁਣੋ, ਫਿਰ ਭੁਗਤਾਨ ਦੀਆਂ ਹਦਾਇਤਾਂ ਦਾ ਪਾਲਣ ਕਰੋ। ਭੁਗਤਾਨ ਪੂਰਾ ਹੋਣ ਤੇ ਤੁਹਾਨੂੰ ਪੁਸ਼ਟੀ ਮਿਲੇਗੀ।",
+      "a6": "ਹਾਂ। ਮਾਤਾ-ਪਿਤਾ ਅਤੇ ਪਰਿਵਾਰ ਸਹਾਇਕ ਮੈਂਬਰਾਂ ਵਜੋਂ ਰਜਿਸਟਰ ਕਰ ਸਕਦੇ ਹਨ। ਬੱਚੇ ਨੂੰ ਰਜਿਸਟਰ ਕਰਨ ਲਈ, 'ਸਰਗਰਮ ਮੈਂਬਰ' ਚੁਣੋ ਅਤੇ ਉਮਰ ਸਮੂਹ ਚੁਣੋ। ਮਾਤਾ-ਪਿਤਾ ਕਲਾਸਾਂ ਵੇਖਣ ਅਤੇ ਸਾਡੇ ਇਵੈਂਟਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਲਈ ਸਵਾਗਤ ਹਨ।",
+      "a7": "ਹਾਂ, ਕਲਾਸਾਂ ਬਦਲਣ ਜਾਂ ਆਪਣੀ ਮੈਂਬਰਸ਼ਿਪ ਨੂੰ ਐਡਜਸਟ ਕਰਨ ਲਈ ਈਮੇਲ ਜਾਂ ਫੀਡਬੈਕ ਫਾਰਮ ਰਾਹੀਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਤਬਦੀਲੀਆਂ ਉਪਲਬਧਤਾ ਤੇ ਨਿਰਭਰ ਕਰਦੀਆਂ ਹਨ।",
+      "a8": "Marikollen Kultursal ਅਤੇ ਨੇੜਲੇ ਫੁੱਟਬਾਲ ਮੈਦਾਨ ਪਾਰਕਿੰਗ ਵਿੱਚ ਮੁਫਤ ਪਾਰਕਿੰਗ ਉਪਲਬਧ ਹੈ। EasyPark ਐਪ ਵਿੱਚ ਰਜਿਸਟਰ ਕਰਨ ਤੇ ਇਹ ਮੁਫਤ ਹੈ। ਪੂਰੇ ਪਤੇ ਅਤੇ ਨਕਸ਼ੇ ਲਈ ਸਾਡਾ ਕਲਾਸਾਂ ਪੰਨਾ ਵੇਖੋ।",
+      "aWear": "ਆਰਾਮਦਾਇਕ ਕਸਰਤ ਦੇ ਕੱਪੜੇ ਅਤੇ ਜੁਰਾਬਾਂ ਪਹਿਨੋ (ਅਸੀਂ ਜੁੱਤੀਆਂ ਤੋਂ ਬਿਨਾਂ ਨੱਚਦੇ ਹਾਂ)। ਜੀਨਸ ਤੋਂ ਬਚੋ। ਪਾਣੀ ਲੈ ਕੇ ਆਓ।",
+      "aPerform": "ਹਾਂ, ਅਸੀਂ ਸੱਭਿਆਚਾਰਕ ਸਮਾਗਮਾਂ ਅਤੇ ਤਿਉਹਾਰਾਂ ਤੇ ਨਿਯਮਿਤ ਤੌਰ ਤੇ ਪ੍ਰਦਰਸ਼ਨ ਕਰਦੇ ਹਾਂ। ਮੈਂਬਰ ਪ੍ਰਦਰਸ਼ਨੀਆਂ ਅਤੇ ਮੁਕਾਬਲਿਆਂ ਵਿੱਚ ਹਿੱਸਾ ਲੈ ਸਕਦੇ ਹਨ। ਆਉਣ ਵਾਲੇ ਪ੍ਰਦਰਸ਼ਨਾਂ ਲਈ ਸਾਡਾ ਖ਼ਬਰਾਂ ਅਤੇ ਸਮਾਗਮਾਂ ਪੰਨਾ ਵੇਖੋ।",
+      "aBook": "ਹਾਂ! ਅਸੀਂ ਵਿਆਹਾਂ, ਜਨਮਦਿਨ ਦੀਆਂ ਪਾਰਟੀਆਂ, ਕਾਰਪੋਰੇਟ ਸਮਾਗਮਾਂ ਅਤੇ ਹੋਰ ਵਿਸ਼ੇਸ਼ ਮੌਕਿਆਂ ਲਈ ਨਿੱਜੀ ਡਾਂਸ ਲੈਸਨ ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਦੇ ਹਾਂ। ਸਮਾਗਮ ਵੇਰਵਿਆਂ ਦੇ ਨਾਲ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ ਅਤੇ ਅਸੀਂ ਤੁਹਾਡੇ ਲਈ ਪੈਕੇਜ ਤਿਆਰ ਕਰਾਂਗੇ।"
+    },
+    "support": {
+      "title": "ਸਾਡਾ ਸਮਰਥਨ ਕਰੋ",
+      "description": "ਸਹਾਇਕ ਮੈਂਬਰ ਬਣੋ ਅਤੇ ਸਾਡੇ ਭਾਈਚਾਰੇ ਨੂੰ ਵਧਣ ਵਿੱਚ ਮਦਦ ਕਰੋ।",
+      "now": "ਹੁਣੇ ਸਮਰਥਨ ਕਰੋ"
+    },
+    "footer": {
+      "contact": "ਸੰਪਰਕ",
+      "follow": "ਫਾਲੋ ਕਰੋ",
+      "address": "Ravinen, Rælingen",
+      "phoneLabel": "ਫ਼ੋਨ",
+      "emailLabel": "ਈਮੇਲ",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "rightsReserved": "ਸਾਰੇ ਅਧਿਕਾਰ ਸੁਰੱਖਿਅਤ।",
+      "credit": "ਜੁਗਾਡ ਬੋਪਰਾਏ ਦੁਆਰਾ ਸੰਚਾਲਿਤ",
+      "opensNewTab": "ਨਵੀਂ ਵਿੰਡੋ ਵਿੱਚ ਖੁੱਲਦਾ ਹੈ"
+    }
+    ,
+    "news": {
+      "title": "ਖਬਰਾਂ ਅਤੇ ਸਮਾਗਮ",
+      "subtitle": "Surmedania ਤੋਂ ਖਬਰਾਂ, ਆਉਣ ਵਾਲੇ ਸਮਾਗਮਾਂ ਅਤੇ ਮੁੱਖ ਗੱਲਾਂ ਬਾਰੇ ਅਪਡੇਟ ਰਹੋ।",
+      "nextEvent": "ਅਗਲਾ ਸਮਾਗਮ",
+      "upcomingEvents": "ਆਉਣ ਵਾਲੇ ਸਮਾਗਮ",
+      "scheduledCount": "{count} ਯੋਜਨਾਬੱਧ",
+      "noneUpcoming": "ਇਸ ਸਮੇਂ ਕੋਈ ਆਉਣ ਵਾਲੇ ਸਮਾਗਮ ਨਹੀਂ।",
+      "badgeUpcoming": "ਆਉਣ ਵਾਲਾ",
+      "addToCalendar": "ਕੈਲੰਡਰ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ",
+      "pastEvents": "ਪਿਛਲੇ ਸਮਾਗਮ",
+      "postedCount": "{count} ਪੋਸਟ ਕੀਤੇ",
+      "badgePast": "ਪਿਛਲਾ",
+      "status": {
+        "passed": "ਬੀਤ ਗਿਆ",
+        "today": "🔥 ਅੱਜ",
+        "tomorrow": "ਕੱਲ੍ਹ",
+        "inDays": "{count} ਦਿਨਾਂ ਵਿੱਚ"
+      }
+    }
+  }
+}

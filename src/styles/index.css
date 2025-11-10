@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --gold: #BFA14A;
+  --offwhite: #F8F5F0;
+  --deepblack: #111111;
+}
+
+
+@layer base {
+  body{
+    @apply bg-offwhite text-deepblack font-body;
+  }
+}
+
+@layer components {
+  .lux-card{
+    @apply bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-white/30;
+  }
+
+  .phulkari-accent{
+    /* Decorative subtle border/pattern placeholder */
+    background-image: linear-gradient(90deg, rgba(191,161,74,0.06), transparent);
+  }
+}
+
+@layer utilities {
+  .gold-text{ color: var(--gold); }
+}
+
+/* Container tweak to keep a luxurious max width */
+.container{
+  max-width: 1100px;
+}
+
+/* Reduced motion support: disable non-essential animations/transitions for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* Optional: remove framer-motion driven entrance opacity transitions by forcing elements visible quickly */
+  [data-motion-reduce="fade"] { opacity: 1 !important; transform: none !important; }
+}
