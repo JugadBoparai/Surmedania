@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { Link, NavLink } from 'react-router-dom'
 import logoUrl from '../assets/logo.svg'
 import { useLang } from '../context/LanguageContext'
+import { useCart } from '../context/CartContext'
 import LanguageSwitcher from './LanguageSwitcher'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -10,6 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Header(){
   const { t } = useLang()
+  const { toggleCart, getCartCount } = useCart()
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const drawerRef = useRef(null)
@@ -64,12 +66,30 @@ export default function Header(){
           <NavLink to="/styles" className={navClass}>{t('nav.styles', 'Styles')}</NavLink>
        <NavLink to="/gallery" className={navClass}>{t('nav.gallery')}</NavLink>
   <NavLink to="/news" className={navClass}>{t('nav.news')}</NavLink>
+          <NavLink to="/merch" className={navClass}>{t('nav.merch', 'Merch')}</NavLink>
        <NavLink to="/faq" className={navClass}>{t('nav.faq')}</NavLink>
        <NavLink to="/feedback" className={navClass}>{t('nav.feedback')}</NavLink>
         </nav>
 
         <div className="flex items-center gap-4">
           <LanguageSwitcher />
+          
+          {/* Shopping Cart Button */}
+          <button
+            onClick={toggleCart}
+            className="relative p-2 rounded-full hover:bg-black/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            aria-label={t('cart.openCart', 'Open shopping cart')}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+            {getCartCount() > 0 && (
+              <span className="absolute -top-1 -right-1 bg-gradient-to-br from-gold to-[#B8902F] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                {getCartCount()}
+              </span>
+            )}
+          </button>
+
           <Link
             to="/registration"
             className="hidden sm:inline-block rounded-full bg-gradient-to-br from-[#C9A74A] to-[#B8902F] px-4 py-2 text-white shadow-sm transition hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#C9A74A]/40"
@@ -153,6 +173,7 @@ export default function Header(){
                     <NavLink onClick={() => setOpen(false)} to="/styles" className={navClass}>{t('nav.styles', 'Styles')}</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/gallery" className={navClass}>{t('nav.gallery')}</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/news" className={navClass}>{t('nav.news')}</NavLink>
+                    <NavLink onClick={() => setOpen(false)} to="/merch" className={navClass}>{t('nav.merch', 'Merch')}</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/faq" className={navClass}>{t('nav.faq')}</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/feedback" className={navClass}>{t('nav.feedback')}</NavLink>
                     <Link
