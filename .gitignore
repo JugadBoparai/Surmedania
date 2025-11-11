@@ -10,6 +10,15 @@ build/
 .env
 .env.local
 .env.*.local
+server/.env
+
+# Credentials and secrets
+*.key
+*.pem
+*.credentials
+*.json.secret
+.credentials/
+credentials/
 
 # Logs
 *.log
