@@ -35,7 +35,10 @@ export default function RegistrationPage(){
   async function submit(e){
     e.preventDefault()
     // Basic client-side validation
-    if(!form.name || !form.email) return setStatus(t('registration.fillRequired'))
+    if(!form.name || !form.email || !form.phone) return setStatus(t('registration.fillRequired'))
+    if(memberType === 'active' && (!form.dob || !form.experience || !form.classSelection)) {
+      return setStatus(t('registration.fillRequired'))
+    }
     setStatus(null)
     try{
       const res = await fetch(SHEETS_WEBHOOK, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ memberType, ...form }) })
@@ -75,33 +78,36 @@ export default function RegistrationPage(){
 
           <form onSubmit={submit} className="space-y-4 sm:space-y-5">
             <div>
-              <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.name')}</label>
+              <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.name')} *</label>
               <input 
                 name="name" 
                 value={form.name} 
-                onChange={update} 
+                onChange={update}
+                required
                 className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition" 
               />
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.email')}</label>
+                <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.email')} *</label>
                 <input 
                   name="email" 
                   type="email"
                   value={form.email} 
-                  onChange={update} 
+                  onChange={update}
+                  required
                   className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition" 
                 />
               </div>
               <div>
-                <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.phone')}</label>
+                <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.phone')} *</label>
                 <input 
                   name="phone" 
                   type="tel"
                   value={form.phone} 
-                  onChange={update} 
+                  onChange={update}
+                  required
                   className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition" 
                 />
               </div>
@@ -111,12 +117,13 @@ export default function RegistrationPage(){
               <>
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
-                    <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.dob')}</label>
+                    <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.dob')} *</label>
                     <input 
                       name="dob" 
                       type="date"
                       value={form.dob} 
                       onChange={update}
+                      required
                       placeholder="DD/MM/YYYY"
                       max={new Date().toISOString().split('T')[0]}
                       className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition text-base font-medium [color-scheme:light]" 
@@ -124,11 +131,12 @@ export default function RegistrationPage(){
                     />
                   </div>
                   <div>
-                    <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.experience')}</label>
+                    <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.experience')} *</label>
                     <select 
                       name="experience" 
                       value={form.experience} 
-                      onChange={update} 
+                      onChange={update}
+                      required
                       className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition bg-white"
                     >
                       <option value="">{t('registration.experienceSelect')}</option>
@@ -166,7 +174,7 @@ export default function RegistrationPage(){
 
             {memberType==='active' && (
               <div>
-                <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.classSelection') || 'Class selection'}</label>
+                <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.classSelection') || 'Class selection'} *</label>
                 {/**
                  * We separate the canonical value (Thursday/Sunday) from the localized display text.
                  * This lets URL query ?class=Thursday preselect the right option even though the
@@ -176,6 +184,7 @@ export default function RegistrationPage(){
                   name="classSelection"
                   value={form.classSelection}
                   onChange={update}
+                  required
                   className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition bg-white"
                 >
                   <option value="">{t('registration.classSelect') || 'Select class'}</option>
