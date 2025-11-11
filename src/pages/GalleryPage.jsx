@@ -5,13 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 const images = [
   '/hero.jpg',
   '/bhangra.jpg',
-  '/logo1.jpg',
   '/giddha.jpg',
   '/giddha1.jpg',
   '/giddha2.jpg',
   '/giddha3.jpg',
-  '/giddha4.jpg',
-  '/founder.jpeg'
+  '/giddha4.jpg'
 ]
 
 export default function GalleryPage(){
