@@ -1,9 +1,15 @@
 import React from 'react'
 import { useLang } from '../context/LanguageContext'
 import { motion } from 'framer-motion'
-import heroPlaceholder from '../assets/hero-placeholder.svg'
 
-const images = [heroPlaceholder, heroPlaceholder, heroPlaceholder, heroPlaceholder, heroPlaceholder, heroPlaceholder]
+const images = [
+  '/hero.jpg',
+  '/giddha.jpg',
+  '/giddha1.jpg',
+  '/giddha2.jpg',
+  '/idk.jpg',
+  '/founder.jpeg'
+]
 
 export default function GalleryPage(){
   const { t } = useLang()
