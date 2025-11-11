@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { getLocalized } from '../utils/i18n'
 import newsData from '../data/news.json'
-import heroPlaceholder from '../assets/hero-placeholder.svg'
 
 export default function Hero(){
   const { t, lang } = useLang()
@@ -234,7 +233,7 @@ export default function Hero(){
               {/* Decorative gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-gold/5 pointer-events-none z-10" />
               <img 
-                src={heroPlaceholder} 
+                src="/hero.jpg" 
                 alt={t('hero.imageAlt')} 
                 className="w-full h-[280px] sm:h-[320px] md:h-[360px] object-cover"
               />
