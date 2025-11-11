@@ -12,6 +12,7 @@ import GalleryPage from './pages/GalleryPage'
 import NewsPage from './pages/NewsPage'
 import RegistrationPage from './pages/RegistrationPage'
 import RegistrationConfirm from './pages/RegistrationConfirm'
+import PaymentComplete from './pages/PaymentComplete'
 import FAQPage from './pages/FAQPage'
 import NotFound from './pages/NotFound'
 import FeedbackPage from './pages/FeedbackPage'
@@ -32,6 +33,7 @@ export default function App(){
             <Route path="/news" element={<NewsPage />} />
             <Route path="/registration" element={<RegistrationPage />} />
             <Route path="/registration/confirm" element={<RegistrationConfirm />} />
+            <Route path="/registration/payment-complete" element={<PaymentComplete />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/feedback" element={<FeedbackPage />} />
             <Route path="/styles" element={<Styles />} />

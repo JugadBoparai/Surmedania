@@ -11,11 +11,12 @@ export default function RegistrationConfirm(){
   const [selectedAmount, setSelectedAmount] = useState('')
   const [customAmount, setCustomAmount] = useState('')
   const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const SPOND_LINK = 'https://spond.com/invite/EUKYZ'
   const VIPPS_NUMBER = '943635'
   
-  const handlePayment = () => {
+  const handlePayment = async () => {
     let amountToPay = ''
     
     if (memberType === 'active') {
@@ -35,8 +36,43 @@ export default function RegistrationConfirm(){
     }
     
     setError('')
-    // Show instructions with the amount they selected
-    document.getElementById('payment-instructions').scrollIntoView({ behavior: 'smooth' })
+    setLoading(true)
+    
+    // Generate unique order ID
+    const orderId = `SUR${Date.now()}${Math.random().toString(36).substring(2, 7).toUpperCase()}`
+    
+    try {
+      // Call Vipps API to initiate payment
+      const response = await fetch('/api/vipps-initiate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: amountToPay,
+          memberType,
+          name: state.name || '',
+          phone: state.phone || '',
+          email: state.email || '',
+          orderId
+        })
+      })
+      
+      const data = await response.json()
+      
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || 'Failed to initiate payment')
+      }
+      
+      // Redirect to Vipps payment page
+      window.location.href = data.url
+      
+    } catch (err) {
+      console.error('Payment error:', err)
+      setLoading(false)
+      setError(t('payment.error') || 'Failed to start payment. Please try again or use manual Vipps payment below.')
+      // Show manual payment instructions as fallback
+      const el = document.getElementById('payment-instructions')
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
@@ -109,14 +145,15 @@ export default function RegistrationConfirm(){
           
           <button
             onClick={handlePayment}
-            className="px-6 py-3 bg-gradient-to-br from-[#C9A74A] to-[#B8902F] text-white rounded-lg text-sm font-semibold hover:shadow-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/40"
+            disabled={loading}
+            className="px-6 py-3 bg-gradient-to-br from-[#C9A74A] to-[#B8902F] text-white rounded-lg text-sm font-semibold hover:shadow-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/40 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {t('confirm.continueToPayment') || 'Continue to Payment'}
+            {loading ? (t('payment.processing') || 'Processing...') : (t('confirm.continueToPayment') || 'Continue to Payment')}
           </button>
         </div>
 
         {/* Payment Instructions (shown after clicking Continue) */}
-  <div id="payment-instructions" className={`${(selectedAmount || (customAmount && parseInt(customAmount) >= 50)) ? 'block' : 'hidden'} mb-10 p-6 sm:p-7 bg-gold/10 rounded-lg border border-gold/20`}>        
+  <div id="payment-instructions" className={`${error ? 'block' : 'hidden'} mb-10 p-6 sm:p-7 bg-gold/10 rounded-lg border border-gold/20`}>
           <h3 className="font-semibold text-base sm:text-lg mb-4">{t('confirm.payVipps')}</h3>
           <p className="text-sm text-black/70 mb-3">{t('confirm.vippsInstruction')}</p>
           <div className="text-5xl font-bold text-gold mb-3 tracking-tight">{VIPPS_NUMBER}</div>
