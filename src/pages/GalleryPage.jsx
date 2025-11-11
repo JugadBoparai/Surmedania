@@ -9,7 +9,8 @@ const images = [
   '/giddha1.jpg',
   '/giddha2.jpg',
   '/giddha3.jpg',
-  '/giddha4.jpg'
+  '/giddha4.jpg',
+  '/trening.jpg'
 ]
 
 export default function GalleryPage(){
