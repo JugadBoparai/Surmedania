@@ -1,9 +1,4 @@
 const { appendToSheet } = require('../server/googleSheets')
-const { createObjectCsvWriter } = require('csv-writer')
-const path = require('path')
-const fs = require('fs')
-
-const CSV_PATH = path.join(__dirname, '..', 'server', 'registrations.csv')
 
 function formatTimestampNO(date = new Date()){
   const pad = n => String(n).padStart(2, '0')
