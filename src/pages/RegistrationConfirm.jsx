@@ -102,6 +102,7 @@ export default function RegistrationConfirm(){
                     : 'border-gold hover:bg-gold/10'
                 }`}
               >
+                <div className="text-xs font-semibold mb-2 uppercase tracking-wide opacity-80">Starter</div>
                 <div className="text-lg font-semibold mb-2">3 {t('confirm.months')}</div>
                 <div className="text-3xl font-bold mb-1">199 NOK</div>
                 <div className="text-sm opacity-80">{t('confirm.perMonth')}: 66 NOK</div>
@@ -115,6 +116,7 @@ export default function RegistrationConfirm(){
                     : 'border-gold hover:bg-gold/10'
                 }`}
               >
+                <div className="text-xs font-semibold mb-2 uppercase tracking-wide opacity-80">Standard</div>
                 <div className="text-lg font-semibold mb-2">6 {t('confirm.months')}</div>
                 <div className="text-3xl font-bold mb-1">349 NOK</div>
                 <div className="text-sm opacity-80">{t('confirm.perMonth')}: 58 NOK</div>
@@ -131,6 +133,7 @@ export default function RegistrationConfirm(){
                 <div className="absolute -top-2 right-2 bg-gold text-white text-xs font-bold px-2 py-1 rounded">
                   {t('confirm.bestValue')}
                 </div>
+                <div className="text-xs font-semibold mb-2 uppercase tracking-wide opacity-80">Premium</div>
                 <div className="text-lg font-semibold mb-2">12 {t('confirm.months')}</div>
                 <div className="text-3xl font-bold mb-1">449 NOK</div>
                 <div className="text-sm opacity-80">{t('confirm.perMonth')}: 37 NOK</div>
