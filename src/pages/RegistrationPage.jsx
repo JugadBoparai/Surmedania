@@ -109,7 +109,7 @@ export default function RegistrationPage(){
 
             {memberType==='active' && (
               <>
-                <div className="grid gap-4 sm:grid-cols-3">
+                <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.dob')}</label>
                     <input 
@@ -122,20 +122,6 @@ export default function RegistrationPage(){
                       className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition text-base font-medium [color-scheme:light]" 
                       style={{ minWidth: '150px' }}
                     />
-                  </div>
-                  <div>
-                    <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.style')}</label>
-                    <select 
-                      name="style" 
-                      value={form.style} 
-                      onChange={update} 
-                      className="w-full px-4 py-3 border-2 border-black/10 rounded-lg focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/20 transition bg-white"
-                    >
-                      <option value="">{t('registration.styleSelect')}</option>
-                      <option value="Bhangra">{t('registration.styleBhangra')}</option>
-                      <option value="Giddha">{t('registration.styleGiddha')}</option>
-                      <option value="Bollywood">{t('registration.styleBollywood')}</option>
-                    </select>
                   </div>
                   <div>
                     <label className="block text-sm sm:text-base font-medium mb-2">{t('registration.experience')}</label>
