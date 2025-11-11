@@ -1,4 +1,35 @@
-const { appendToSheet } = require('../server/googleSheets')
+const { google } = require('googleapis')
+
+function getSheetsClient(){
+  const clientEmail = process.env.GOOGLE_CLIENT_EMAIL
+  let privateKey = process.env.GOOGLE_PRIVATE_KEY
+  if(!clientEmail || !privateKey) throw new Error('Google credentials not configured')
+
+  privateKey = privateKey.replace(/\\n/g, '\n')
+
+  const jwtClient = new google.auth.JWT(
+    clientEmail,
+    null,
+    privateKey,
+    ['https://www.googleapis.com/auth/spreadsheets']
+  )
+
+  const sheets = google.sheets({ version: 'v4', auth: jwtClient })
+  return { sheets, jwtClient }
+}
+
+async function appendToSheet(sheetId, sheetName, rowValues){
+  const { sheets, jwtClient } = getSheetsClient()
+  await jwtClient.authorize()
+  await sheets.spreadsheets.values.append({
+    spreadsheetId: sheetId,
+    range: `${sheetName}!A:Z`,
+    valueInputOption: 'RAW',
+    requestBody: {
+      values: [rowValues]
+    }
+  })
+}
 
 function formatTimestampNO(date = new Date()){
   const pad = n => String(n).padStart(2, '0')
