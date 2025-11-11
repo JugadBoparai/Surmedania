@@ -3,18 +3,12 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { getLocalized } from '../utils/i18n'
+import newsData from '../data/news.json'
+import heroPlaceholder from '../assets/hero-placeholder.svg'
 
 export default function Hero(){
   const { t, lang } = useLang()
-  const [news, setNews] = useState([])
-  const [loaded, setLoaded] = useState(false)
-
-  useEffect(() => {
-    fetch('/src/data/news.json')
-      .then(r=>r.json())
-      .then(d => { setNews(d); setLoaded(true) })
-      .catch(() => setLoaded(true))
-  }, [])
+  const [news, setNews] = useState(newsData)
 
   const today = useMemo(()=> new Date(), [])
   const nextEvent = useMemo(() => {
@@ -240,7 +234,7 @@ export default function Hero(){
               {/* Decorative gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-gold/5 pointer-events-none z-10" />
               <img 
-                src="/src/assets/hero-placeholder.svg" 
+                src={heroPlaceholder} 
                 alt={t('hero.imageAlt')} 
                 className="w-full h-[280px] sm:h-[320px] md:h-[360px] object-cover"
               />

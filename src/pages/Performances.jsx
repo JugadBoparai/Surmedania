@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useLang } from '../context/LanguageContext'
 import { getLocalized } from '../utils/i18n'
+import performances from '../data/performances.json'
 
 export default function Performances(){
   const { lang, t } = useLang()
-  const [list, setList] = useState([])
-
-  useEffect(()=>{
-    fetch('/src/data/performances.json').then(r=>r.json()).then(setList)
-  },[])
+  const [list, setList] = useState(performances)
 
   return (
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">

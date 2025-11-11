@@ -17,7 +17,8 @@ module.exports = {
         body: ['Poppins', 'sans-serif']
       },
       backgroundImage: {
-        'phulkari-pattern': "url('/src/assets/phulkari-pattern.svg')"
+        // Use an asset served from /public to ensure production availability
+        'phulkari-pattern': "url('/phulkari-pattern.svg')"
       }
     }
   },

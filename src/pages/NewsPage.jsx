@@ -1,18 +1,11 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import { useLang } from '../context/LanguageContext'
 import { motion } from 'framer-motion'
+import newsData from '../data/news.json'
 
 export default function NewsPage(){
   const { lang, t } = useLang()
-  const [items, setItems] = useState([])
-  const [loaded, setLoaded] = useState(false)
-
-  useEffect(() => {
-    fetch('/src/data/news.json')
-      .then(r=>r.json())
-      .then(data => { setItems(data); setLoaded(true) })
-      .catch(()=> setLoaded(true))
-  }, [])
+  const [items, setItems] = useState(newsData)
 
   const today = useMemo(() => new Date(), [])
   const upcoming = useMemo(() => {

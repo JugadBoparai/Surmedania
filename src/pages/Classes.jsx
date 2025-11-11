@@ -1,23 +1,16 @@
-import React, { useState, useMemo, useEffect } from 'react'
+import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import ClassCard from '../components/ClassCard'
 import { useLang } from '../context/LanguageContext'
 import classContent from '../data/classes.json'
 import { getLocalized } from '../utils/i18n'
 import holidaysData from '../data/holidays.json'
+import newsData from '../data/news.json'
 
 export default function Classes(){
   const { t, lang } = useLang()
   const [currentDate, setCurrentDate] = useState(new Date())
-  const [events, setEvents] = useState([])
-
-  // Fetch events from news.json
-  useEffect(() => {
-    fetch('/src/data/news.json')
-      .then(r => r.json())
-      .then(data => setEvents(data))
-      .catch(() => setEvents([]))
-  }, [])
+  const events = newsData
 
   // Holidays loaded from data file
   const holidays = useMemo(() => {
