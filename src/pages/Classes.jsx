@@ -82,6 +82,9 @@ export default function Classes(){
         <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl mb-3 bg-gradient-to-br from-black to-black/70 bg-clip-text text-transparent">
           {t('nav.classes')}
         </h1>
+        <p className="text-gold font-medium tracking-wide text-xs sm:text-sm">
+          {t('classes.subtitle')}
+        </p>
       </motion.div>
       {/* Cards stack on mobile, two columns on medium screens */}
       <motion.div

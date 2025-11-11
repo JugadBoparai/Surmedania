@@ -132,6 +132,7 @@
       "founderCaption": "Angela Kaur — Founder"
     },
     "classes": {
+      "subtitle": "Join our vibrant dance community",
       "location": "Ravinen, Rælingen",
       "locationTitle": "Location",
       "thursday": "Thursday 19–21: Adults 16+",
@@ -156,6 +157,7 @@
     },
     "performances": {
       "title": "Performances",
+      "subtitle": "Showcasing our artistry and passion",
       "relatedMedia": "See related media"
     },
     "registration": {
@@ -343,7 +345,7 @@
       }
     },
     "hero": {
-      "tagline": "Opplev energien i punjabisk dans",
+      "tagline": "Opplev energien i punjabi folkedans",
       "viewClasses": "Se klasser",
       "registerNow": "Registrer deg nå",
       "description": "Lær Bhangra, Giddha og Bollywood — fra nybegynnere til avanserte. Bygg styrke, selvtillit og fellesskap gjennom dans.",
@@ -430,6 +432,7 @@
       "founderCaption": "Angela Kaur — Grunnlegger"
     },
     "classes": {
+      "subtitle": "Bli med i vårt livlige dansesamfunn",
       "location": "Ravinen, Rælingen",
       "locationTitle": "Lokasjon",
       "thursday": "Torsdag 19–21: Voksne 16+",
@@ -454,6 +457,7 @@
     },
     "performances": {
       "title": "Forestilling",
+      "subtitle": "Viser vår kunstnerskap og lidenskap",
       "relatedMedia": "Se relatert media"
     },
     "registration": {
@@ -745,6 +749,7 @@
       "founderCaption": "ਅੰਜਲਾ ਕੌਰ — ਸੰਸਥਾਪਕ"
     },
     "classes": {
+      "subtitle": "ਸਾਡੇ ਜੀਵੰਤ ਡਾਂਸ ਭਾਈਚਾਰੇ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
       "location": "ਰਾਵੀਨੇਨ, ਰੈਲਿੰਗਨ",
       "locationTitle": "ਸਥਾਨ",
       "thursday": "ਵੀਰਵਾਰ 19–21: ਬਾਲਗ 16+",
@@ -769,6 +774,7 @@
     },
     "performances": {
       "title": "ਪ੍ਰਦਰਸ਼ਨ",
+      "subtitle": "ਸਾਡੀ ਕਲਾ ਅਤੇ ਜਨੂੰਨ ਨੂੰ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰਨਾ",
       "relatedMedia": "ਸੰਬੰਧਤ ਮੀਡੀਆ ਵੇਖੋ"
     },
     "registration": {

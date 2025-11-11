@@ -124,7 +124,7 @@ export default function NewsPage(){
         <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl mb-3 bg-gradient-to-br from-black to-black/70 bg-clip-text text-transparent">
           {t('news.title')}
         </h1>
-        <p className="text-xs sm:text-sm text-black/70 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-gold font-medium tracking-wide text-xs sm:text-sm">
           {t('news.subtitle')}
         </p>
       </motion.div>
