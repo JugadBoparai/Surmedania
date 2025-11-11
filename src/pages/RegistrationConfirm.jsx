@@ -92,8 +92,21 @@ export default function RegistrationConfirm(){
           )}
           
           {memberType === 'active' ? (
-            // Active Members: Select 349 or 449
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
+            // Active Members: Select 199, 349 or 449
+            <div className="grid md:grid-cols-3 gap-4 mb-8">
+              <button
+                onClick={() => setSelectedAmount('199')}
+                className={`p-6 border-2 rounded-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/40 ${
+                  selectedAmount === '199' 
+                    ? 'border-gold bg-gold text-white' 
+                    : 'border-gold hover:bg-gold/10'
+                }`}
+              >
+                <div className="text-lg font-semibold mb-2">3 {t('confirm.months')}</div>
+                <div className="text-3xl font-bold mb-1">199 NOK</div>
+                <div className="text-sm opacity-80">{t('confirm.perMonth')}: 66 NOK</div>
+              </button>
+
               <button
                 onClick={() => setSelectedAmount('349')}
                 className={`p-6 border-2 rounded-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/40 ${
