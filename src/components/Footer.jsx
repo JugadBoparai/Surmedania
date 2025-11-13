@@ -25,7 +25,7 @@ export default function Footer(){
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-4">
           {/* Contact Section */}
           <div>
-            <h3 className="font-heading text-base sm:text-lg mb-2 tracking-wide text-deepblack/90">{t('footer.contact') || 'Contact'}</h3>
+            <h3 className="font-heading text-base sm:text-lg mb-2 tracking-wide text-deepblack/90">Kontakt oss</h3>
             <div className="font-heading text-lg sm:text-xl leading-tight text-deepblack mb-2">Surmedania Dance School</div>
             <address className="not-italic text-sm text-deepblack/70 mb-2 leading-relaxed" aria-label={t('footer.address')}>{t('footer.address')}</address>
             <ul className="space-y-1.5 text-sm">

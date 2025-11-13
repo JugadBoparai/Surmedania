@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import ClassCard from '../components/ClassCard'
 import { useLang } from '../context/LanguageContext'
 import classContent from '../data/classes.json'
@@ -10,6 +10,9 @@ import newsData from '../data/news.json'
 export default function Classes(){
   const { t, lang } = useLang()
   const [currentDate, setCurrentDate] = useState(new Date())
+  // Per-section expand/collapse for class details
+  const [showThuDetails, setShowThuDetails] = useState(false)
+  const [showSunDetails, setShowSunDetails] = useState(false)
   const events = newsData
 
   // Holidays loaded from data file
@@ -71,6 +74,28 @@ export default function Classes(){
 
   const monthNames = t('date.months') || []
   const dayNames = t('date.daysShort') || []
+  
+  const Details = ({ title, items, icon = null }) => {
+    if (!items || !items.length) return null
+    return (
+      <div className="h-full flex flex-col rounded-lg border border-gold/20 bg-gradient-to-br from-gold/5 to-transparent p-4 sm:p-5">
+        <div className="flex items-center gap-2 mb-3">
+          {icon}
+          <h4 className="font-heading text-sm sm:text-base text-deepblack">{title}</h4>
+        </div>
+        <ul className="text-xs sm:text-sm text-black/70 space-y-2 flex-1">
+          {items.map((it, idx) => (
+            <li key={idx} className="flex items-start gap-2">
+              <svg className="w-4 h-4 mt-0.5 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              <span>{getLocalized(it, lang)}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
   return (
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
       <motion.div 
@@ -86,33 +111,221 @@ export default function Classes(){
           {t('classes.subtitle')}
         </p>
       </motion.div>
-      {/* Cards stack on mobile, two columns on medium screens */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="grid gap-6 mb-12 sm:grid-cols-2"
-      >
-        <ClassCard
-          title={t('classes.thursday') || 'Thursday Session'}
-          classDay="Thursday"
+      {/* Class sections (about the class; time lives in calendar below) */}
+      <div className="mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid gap-6 sm:grid-cols-2"
         >
-          <div className="mt-4 text-xs sm:text-sm text-black/70 leading-relaxed">
-            <p className="mb-2">{getLocalized(classContent.thursday.description, lang)}</p>
-            <p className="text-black/60 text-xs italic mt-3">{getLocalized(classContent.thursday.notes, lang)}</p>
+          {/* Thursday */}
+          <div className="bg-gold/10 rounded-lg">
+            <ClassCard
+              title={t('classes.thursday') || 'Thursday Session'}
+              classDay="Thursday"
+            >
+            <div className="mt-4 text-xs sm:text-sm text-black/70 leading-relaxed">
+              <p className="mb-2">
+                {showThuDetails
+                  ? getLocalized(classContent.thursday.description, lang)
+                  : (getLocalized(classContent.thursday.description, lang) || '').slice(0, 160) + ((getLocalized(classContent.thursday.description, lang) || '').length > 160 ? '…' : '')}
+              </p>
+              {/* Old reminders (restored) */}
+              <div className="mt-2 flex flex-wrap gap-2 font-heading italic text-[0.65rem] sm:text-xs text-black/70">
+                <span className="inline-flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  {t('classes.reminders.allLevels', 'All levels welcome')}
+                </span>
+                <span className="text-black/30">•</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  Bring water
+                </span>
+                <span className="text-black/30">•</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  {t('classes.reminders.goodVibes', 'Remember good vibes')}
+                </span>
+              </div>
+              {/* Centered arrow toggle */}
+              <div className="mt-3 flex justify-center">
+                <button
+                  type="button"
+                  aria-expanded={showThuDetails}
+                  aria-controls="thu-details"
+                  aria-label={showThuDetails ? t('classes.showLess', 'Show Less') : t('classes.showMore', 'Show more')}
+                  onClick={() => setShowThuDetails(v => !v)}
+                  className="flex items-center justify-center w-8 h-8 rounded-full border border-gold/40 text-gold hover:border-gold/60 hover:bg-gold/10 transition-colors active:scale-95"
+                >
+                  {showThuDetails ? (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+                  ) : (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  )}
+                </button>
+              </div>
+              <AnimatePresence initial={false}>
+                {showThuDetails && (
+                  <motion.div
+                    id="thu-details"
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    <div className="mt-5 rounded-xl border border-gold/20 bg-white/60 backdrop-blur-[2px] p-4 sm:p-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
+                        <Details
+                          title={t('classes.details.expect', 'What to expect')}
+                          items={classContent.thursday.details?.expectations}
+                          icon={(
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/15 text-gold">
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v8m4-4H8"/></svg>
+                            </span>
+                          )}
+                        />
+                        <Details
+                          title={t('classes.details.who', 'Who it’s for')}
+                          items={classContent.thursday.details?.who}
+                          icon={(
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/15 text-gold">
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M9 20H4v-2a3 3 0 015.356-1.857M7 7a4 4 0 118 0 4 4 0 01-8 0z"/></svg>
+                            </span>
+                          )}
+                        />
+                        <Details
+                          title={t('classes.details.bring', 'What to bring')}
+                          items={classContent.thursday.details?.bring}
+                          icon={(
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/15 text-gold">
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 11H5a2 2 0 00-2 2v6h13v-6a2 2 0 00-2-2zM7 11V7a5 5 0 0110 0v4"/></svg>
+                            </span>
+                          )}
+                        />
+                        {/* Fourth box: More info */}
+                        <div className="h-full flex flex-col rounded-lg border border-gold/20 bg-gradient-to-br from-gold/5 to-transparent p-4 sm:p-5">
+                          <div className="flex items-center gap-2 mb-3">
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/15 text-gold">
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4"/></svg>
+                            </span>
+                            <h4 className="font-heading text-sm sm:text-base text-deepblack">{t('classes.details.more', 'More info')}</h4>
+                          </div>
+                          <p className="text-xs sm:text-sm leading-relaxed text-black/70 flex-1">{getLocalized(classContent.thursday.description, lang)}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </ClassCard>
           </div>
-        </ClassCard>
 
-        <ClassCard
-          title={t('classes.sunday') || 'Sunday Session'}
-          classDay="Sunday"
-        >
-          <div className="mt-4 text-xs sm:text-sm text-black/70 leading-relaxed">
-            <p className="mb-2">{getLocalized(classContent.sunday.description, lang)}</p>
-            <p className="text-black/60 text-xs italic mt-3">{getLocalized(classContent.sunday.notes, lang)}</p>
+          {/* Sunday */}
+          <div className="bg-purple-50 rounded-lg">
+            <ClassCard
+              title={t('classes.sunday') || 'Sunday Session'}
+              classDay="Sunday"
+            >
+            <div className="mt-4 text-xs sm:text-sm text-black/70 leading-relaxed">
+              <p className="mb-2">
+                {showSunDetails
+                  ? getLocalized(classContent.sunday.description, lang)
+                  : (getLocalized(classContent.sunday.description, lang) || '').slice(0, 160) + ((getLocalized(classContent.sunday.description, lang) || '').length > 160 ? '…' : '')}
+              </p>
+              {/* Old reminders (restored) */}
+              <div className="mt-2 flex flex-wrap gap-2 font-heading italic text-[0.65rem] sm:text-xs text-black/70">
+                <span className="inline-flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                  {t('classes.reminders.beginners', 'Beginners welcome')}
+                </span>
+                <span className="text-black/30">•</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+                  {t('classes.reminders.parentsObserve', 'Parents may observe')}
+                </span>
+                <span className="text-black/30">•</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  Bring water
+                </span>
+              </div>
+              {/* Centered arrow toggle */}
+              <div className="mt-3 flex justify-center">
+                <button
+                  type="button"
+                  aria-expanded={showSunDetails}
+                  aria-controls="sun-details"
+                  aria-label={showSunDetails ? t('classes.showLess', 'Show Less') : t('classes.showMore', 'Show more')}
+                  onClick={() => setShowSunDetails(v => !v)}
+                  className="flex items-center justify-center w-8 h-8 rounded-full border border-gold/40 text-gold hover:border-gold/60 hover:bg-gold/10 transition-colors active:scale-95"
+                >
+                  {showSunDetails ? (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
+                  ) : (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                  )}
+                </button>
+              </div>
+              <AnimatePresence initial={false}>
+                {showSunDetails && (
+                  <motion.div
+                    id="sun-details"
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.25 }}
+                  >
+                    <div className="mt-5 rounded-xl border border-gold/20 bg-white/60 backdrop-blur-[2px] p-4 sm:p-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-stretch">
+                        <Details
+                          title={t('classes.details.expect', 'What to expect')}
+                          items={classContent.sunday.details?.expectations}
+                          icon={(
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/15 text-gold">
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v8m4-4H8"/></svg>
+                            </span>
+                          )}
+                        />
+                        <Details
+                          title={t('classes.details.who', 'Who it’s for')}
+                          items={classContent.sunday.details?.who}
+                          icon={(
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/15 text-gold">
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M9 20H4v-2a3 3 0 015.356-1.857M7 7a4 4 0 118 0 4 4 0 01-8 0z"/></svg>
+                            </span>
+                          )}
+                        />
+                        <Details
+                          title={t('classes.details.bring', 'What to bring')}
+                          items={classContent.sunday.details?.bring}
+                          icon={(
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/15 text-gold">
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 11H5a2 2 0 00-2 2v6h13v-6a2 2 0 00-2-2zM7 11V7a5 5 0 0110 0v4"/></svg>
+                            </span>
+                          )}
+                        />
+                        {/* Fourth box: More info */}
+                        <div className="h-full flex flex-col rounded-lg border border-gold/20 bg-gradient-to-br from-gold/5 to-transparent p-4 sm:p-5">
+                          <div className="flex items-center gap-2 mb-3">
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gold/15 text-gold">
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4"/></svg>
+                            </span>
+                            <h4 className="font-heading text-sm sm:text-base text-deepblack">{t('classes.details.more', 'More info')}</h4>
+                          </div>
+                          <p className="text-xs sm:text-sm leading-relaxed text-black/70 flex-1">{getLocalized(classContent.sunday.description, lang)}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </ClassCard>
           </div>
-        </ClassCard>
-      </motion.div>
+        </motion.div>
+      </div>
 
       {/* Interactive Monthly Calendar */}
       <motion.div
@@ -121,8 +334,8 @@ export default function Classes(){
         transition={{ duration: 0.6, delay: 0.4 }}
         className="mb-12"
       >
-        <h3 className="font-heading text-lg sm:text-xl mb-4 text-center">{t('classes.scheduleTitle') || 'Class Schedule'}</h3>
-        <div className="max-w-3xl mx-auto pb-20">
+        <h3 className="font-heading text-xl sm:text-2xl mb-4">{t('classes.scheduleTitle') || 'Class Schedule'}</h3>
+        <div className="pb-20">
           <div className="lux-card">{/* removed overflow-hidden */}
             {/* Calendar Header with Navigation */}
             <div className="bg-gradient-to-r from-gold/20 via-gold/10 to-gold/20 px-3 py-2 border-b border-gold/20 rounded-t-lg">
@@ -136,8 +349,7 @@ export default function Classes(){
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
-                
-                <div className="flex items-center gap-2 flex-1 justify-center">
+                <div className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
@@ -239,9 +451,9 @@ export default function Classes(){
             {/* Calendar Body */}
             <div className="divide-y divide-gray-200 overflow-visible">
               {/* Day Headers */}
-              <div className="grid grid-cols-7 bg-gray-50 text-center text-[10px] font-semibold text-deepblack/60 py-1">
+              <div className="grid grid-cols-7 bg-gray-50 text-center text-xs sm:text-sm font-semibold text-deepblack/60 py-2">
                 {dayNames.map((day, i) => (
-                  <div key={i} className="py-0.5">{day}</div>
+                  <div key={i} className="py-1">{day}</div>
                 ))}
               </div>
               
@@ -250,7 +462,7 @@ export default function Classes(){
                 {calendar.days.map((day, idx) => {
                   if (!day) {
                     return (
-                      <div key={`empty-${idx}`} className="h-12 sm:h-16 border-r border-b border-gray-100 bg-gray-50/30"></div>
+                      <div key={`empty-${idx}`} className="h-16 sm:h-20 md:h-24 border-r border-b border-gray-100 bg-gray-50/30"></div>
                     )
                   }
                   
@@ -274,7 +486,7 @@ export default function Classes(){
                   return (
                     <div
                       key={day}
-                      className={`h-12 sm:h-16 border-r border-b border-gray-100 p-0.5 sm:p-1 relative group cursor-pointer transition-colors ${
+                      className={`h-16 sm:h-20 md:h-24 border-r border-b border-gray-100 p-1 sm:p-2 relative group cursor-pointer transition-colors ${
                         hasEvent ? 'bg-blue-50 hover:bg-blue-100' :
                         hasHoliday ? 'bg-red-50 hover:bg-red-100' :
                         hasAdultClass ? 'bg-gold/10 hover:bg-gold/20' :
@@ -282,18 +494,18 @@ export default function Classes(){
                         'bg-white hover:bg-gray-50'
                       }`}
                     >
-                      <div className={`text-[10px] font-medium ${isToday ? 'bg-gold text-white rounded-full w-4 h-4 flex items-center justify-center text-[9px]' : 'text-deepblack'}`}>
+                      <div className={`text-xs sm:text-sm font-medium ${isToday ? 'bg-gold text-white rounded-full w-6 h-6 flex items-center justify-center text-xs' : 'text-deepblack'}`}>
                         {day}
                       </div>
                       
                       {/* Class indicators */}
                       {hasAdultClass && (
-                        <div className="text-[8px] sm:text-[9px] font-semibold text-gold leading-tight mt-0.5">
+                        <div className="text-[10px] sm:text-xs font-semibold text-gold leading-tight mt-1">
                           19:00
                         </div>
                       )}
                       {hasKidsClass && (
-                        <div className="text-[8px] sm:text-[9px] font-semibold text-purple-600 leading-tight mt-0.5">
+                        <div className="text-[10px] sm:text-xs font-semibold text-purple-600 leading-tight mt-1">
                           15:00
                         </div>
                       )}

@@ -124,7 +124,7 @@ export default function Home(){
           </div>
           <div className="text-center">
             <div className="font-heading text-3xl sm:text-4xl md:text-5xl bg-gradient-to-br from-gold to-gold/70 bg-clip-text text-transparent mb-2">
-              100+
+              65+
             </div>
             <p className="text-xs sm:text-sm text-black/60">
               {t('home.stats.activeMembers')}

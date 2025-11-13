@@ -10,8 +10,8 @@ export default function ClassCard({ title, time, age, children, classDay }){
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
         <div className="flex-1">
           <div className="text-lg sm:text-xl font-heading leading-tight">{title}</div>
-          {(time || age) && (
-            <div className="mt-2 text-xs sm:text-sm text-black/70 font-medium">{[time, age].filter(Boolean).join(' • ')}</div>
+          {age && (
+            <div className="mt-2 text-xs sm:text-sm text-black/70 font-medium">{age}</div>
           )}
         </div>
         <div className="sm:text-right flex-shrink-0">

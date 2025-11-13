@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useLang } from '../context/LanguageContext'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -17,14 +17,66 @@ export default function GalleryPage(){
   const { t } = useLang()
   const [selectedImage, setSelectedImage] = useState(null)
   const [loadedImages, setLoadedImages] = useState({})
+  const closeBtnRef = useRef(null)
+  const lastFocusedRef = useRef(null)
+  const modalRef = useRef(null)
 
   const handleImageLoad = (idx) => {
     setLoadedImages(prev => ({ ...prev, [idx]: true }))
   }
 
+  // Keyboard handlers & focus management for lightbox
+  useEffect(() => {
+    if (selectedImage === null) return
+
+    // save last focused element
+    lastFocusedRef.current = document.activeElement
+
+    const onKey = (e) => {
+      if (e.key === 'Escape') {
+        setSelectedImage(null)
+      } else if (e.key === 'ArrowLeft') {
+        setSelectedImage((s) => (s > 0 ? s - 1 : s))
+      } else if (e.key === 'ArrowRight') {
+        setSelectedImage((s) => (s < images.length - 1 ? s + 1 : s))
+      } else if (e.key === 'Tab') {
+        // basic focus trap inside modal
+        const container = modalRef.current
+        if (!container) return
+        const focusable = Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => !el.hasAttribute('disabled'))
+        if (focusable.length === 0) return
+        const current = document.activeElement
+        const idx = focusable.indexOf(current)
+        if (e.shiftKey) {
+          // move focus backwards
+          const prev = focusable[(idx - 1 + focusable.length) % focusable.length]
+          e.preventDefault()
+          prev.focus()
+        } else {
+          const next = focusable[(idx + 1) % focusable.length]
+          e.preventDefault()
+          next.focus()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', onKey)
+
+    // focus close button when modal opens
+    setTimeout(() => {
+      try { closeBtnRef.current?.focus() } catch (e) {}
+    }, 0)
+
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      // restore focus
+      try { lastFocusedRef.current?.focus() } catch (e) {}
+    }
+  }, [selectedImage])
+
   return (
     <>
-      <section className="relative container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <section id="gallery" className="relative container mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Decorative background elements */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-gold/5 via-gold/10 to-transparent rounded-full blur-3xl" />
@@ -34,7 +86,8 @@ export default function GalleryPage(){
         {/* Page Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-12 sm:mb-16"
         >
@@ -57,14 +110,22 @@ export default function GalleryPage(){
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: idx * 0.05 }}
               className="break-inside-avoid"
             >
-              <motion.div
-                whileHover={{ y: -8 }}
-                transition={{ duration: 0.3 }}
+              <div
+                role="button"
+                tabIndex={0}
+                aria-label={`Open image ${idx + 1} of ${images.length}`}
                 onClick={() => setSelectedImage(idx)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    setSelectedImage(idx)
+                  }
+                }}
                 className="group relative overflow-hidden rounded-2xl cursor-pointer bg-gradient-to-br from-gold/5 to-transparent"
               >
                 {/* Loading skeleton */}
@@ -76,6 +137,8 @@ export default function GalleryPage(){
                 <img 
                   src={src} 
                   alt={`Gallery ${idx+1}`} 
+                  loading="lazy"
+                  decoding="async"
                   onLoad={() => handleImageLoad(idx)}
                   className={`w-full h-auto object-cover transition-all duration-500 ${loadedImages[idx] ? 'opacity-100' : 'opacity-0'}`}
                 />
@@ -96,7 +159,7 @@ export default function GalleryPage(){
 
                 {/* Decorative corner accent */}
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-gold/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </motion.div>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -117,6 +180,8 @@ export default function GalleryPage(){
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               onClick={() => setSelectedImage(null)}
+              ref={closeBtnRef}
+              aria-label="Close gallery (Esc)"
               className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,12 +195,16 @@ export default function GalleryPage(){
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-7xl max-h-[90vh] cursor-default"
+              ref={modalRef}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Image viewer"
+              className="relative w-full h-full max-w-[90vw] max-h-[90vh] cursor-default flex items-center justify-center"
             >
               <img
                 src={images[selectedImage]}
                 alt={`Gallery ${selectedImage + 1}`}
-                className="w-full h-full object-contain rounded-2xl shadow-2xl"
+                className="max-w-full max-h-full object-contain rounded-2xl shadow-2xl"
               />
               
               {/* Navigation arrows */}
@@ -145,6 +214,7 @@ export default function GalleryPage(){
                     e.stopPropagation()
                     setSelectedImage(selectedImage - 1)
                   }}
+                  aria-label="Previous image"
                   className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -159,6 +229,7 @@ export default function GalleryPage(){
                     e.stopPropagation()
                     setSelectedImage(selectedImage + 1)
                   }}
+                  aria-label="Next image"
                   className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -168,7 +239,7 @@ export default function GalleryPage(){
               )}
 
               {/* Image counter */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium" aria-live="polite">
                 {selectedImage + 1} / {images.length}
               </div>
             </motion.div>

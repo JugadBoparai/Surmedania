@@ -50,7 +50,7 @@ export default function FeedbackPage() {
         className="text-center mb-10 sm:mb-12"
       >
         <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl mb-3 bg-gradient-to-br from-black to-black/70 bg-clip-text text-transparent leading-tight pb-1">
-          {t('feedback.title')}
+          {lang === 'no' ? 'Kontakt oss' : lang === 'pa' ? 'ਸੰਪਰਕ' : 'Contact'}
         </h1>
         <p className="text-gold font-medium tracking-wide text-xs sm:text-sm">
           {t('feedback.subtitle')}

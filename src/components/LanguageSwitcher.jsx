@@ -12,8 +12,8 @@ export default function LanguageSwitcher({ className = '', variant = 'dropdown' 
   const dropdownRef = useRef(null)
 
   const languageData = {
-    en: { label: 'English', flag: '🇬🇧', aria: t('nav.a11y.switchToEn') },
-    no: { label: 'Norsk', flag: '🇳🇴', aria: t('nav.a11y.switchToNo') },
+    en: { label: 'EN', flag: '🇬🇧', aria: t('nav.a11y.switchToEn') },
+    no: { label: 'NO', flag: '🇳🇴', aria: t('nav.a11y.switchToNo') },
     pa: { label: 'ਪੰਜਾਬੀ', flag: '🇮🇳', aria: t('nav.a11y.switchToPa') },
   }
 
@@ -47,7 +47,12 @@ export default function LanguageSwitcher({ className = '', variant = 'dropdown' 
   const currentLang = languageData[lang] || languageData.en
 
   return (
-    <div ref={dropdownRef} className={`relative inline-block ${className}`}>
+    <div 
+      ref={dropdownRef} 
+      className={`relative inline-block ${className}`}
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
       {/* Dropdown trigger button - compact, flag only */}
       <button
         type="button"
@@ -55,7 +60,7 @@ export default function LanguageSwitcher({ className = '', variant = 'dropdown' 
         aria-label={t('nav.a11y.chooseLanguage')}
         aria-expanded={open}
         aria-haspopup="listbox"
-        className="flex items-center justify-center rounded-lg border border-black/10 bg-white/90 backdrop-blur-sm w-9 h-9 shadow-sm transition-all hover:shadow-md hover:border-[#C9A74A]/30 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A74A]/40 focus-visible:ring-offset-1"
+        className="flex items-center justify-center rounded-lg border border-black/10 bg-white/90 backdrop-blur-sm w-9 h-9 shadow-sm transition-all hover:shadow-lg hover:border-gold/50 hover:bg-gold/10 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A74A]/40 focus-visible:ring-offset-1"
       >
         <span className="text-lg leading-none">{currentLang.flag}</span>
       </button>

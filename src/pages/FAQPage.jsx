@@ -7,23 +7,59 @@ import { useLang } from '../context/LanguageContext'
 export default function FAQPage(){
   const { t, lang } = useLang()
 
+  // Helper function to add links to answers
+  const addLinks = (text, linkMap) => {
+    let result = text
+    Object.entries(linkMap).forEach(([keyword, url]) => {
+      const link = `<a href="${url}" class="text-gold hover:underline font-medium">${keyword}</a>`
+      result = result.replace(keyword, link)
+    })
+    return <span dangerouslySetInnerHTML={{ __html: result }} />
+  }
+
   const generalItems = [
     { q: t('faq.q1'), a: t('faq.a1') },
     { q: t('faq.q2'), a: t('faq.a2') },
-    { q: t('faq.q3'), a: t('faq.a3') }
+    { 
+      q: t('faq.q3'), 
+      a: addLinks(t('faq.a3'), {
+        [lang === 'no' ? 'Klasser-siden' : lang === 'pa' ? 'ਕਲਾਸਾਂ ਪੰਨਾ' : 'Classes page']: '/classes'
+      })
+    }
   ]
 
   const membershipItems = [
-    { q: t('faq.q4'), a: t('faq.a4') },
-    { q: t('faq.q5'), a: t('faq.a5') },
+    { 
+      q: t('faq.q4'), 
+      a: addLinks(t('faq.a4'), {
+        [lang === 'no' ? 'Registrering' : lang === 'pa' ? 'ਰਜਿਸਟ੍ਰੇਸ਼ਨ' : 'Registration']: '/registration'
+      })
+    },
+    { 
+      q: t('faq.q5'), 
+      a: addLinks(t('faq.a5'), {
+        [lang === 'no' ? 'Registrering' : lang === 'pa' ? 'ਰਜਿਸਟ੍ਰੇਸ਼ਨ' : 'Registration']: '/registration'
+      })
+    },
     { q: t('faq.q6'), a: t('faq.a6') }
   ]
 
   const practicalItems = [
     { q: t('faq.q7'), a: t('faq.a7') },
-    { q: t('faq.q8'), a: t('faq.a8') },
+    { 
+      q: t('faq.q8'), 
+      a: addLinks(t('faq.a8'), {
+        'Marikollen Kultursal': 'https://www.google.com/maps/place/Marikollen+Kultursal/@59.9321,11.0879,17z',
+        [lang === 'no' ? 'Klasser-siden' : lang === 'pa' ? 'ਕਲਾਸਾਂ ਪੰਨਾ' : 'Classes page']: '/classes'
+      })
+    },
     { q: t('faq.qWear'), a: t('faq.aWear') },
-    { q: t('faq.qPerform'), a: t('faq.aPerform') },
+    { 
+      q: t('faq.qPerform'), 
+      a: addLinks(t('faq.aPerform'), {
+        [lang === 'no' ? 'Nyheter og hendelser' : lang === 'pa' ? 'ਖ਼ਬਰਾਂ ਅਤੇ ਸਮਾਗਮ' : 'News & Events']: '/news'
+      })
+    },
     { q: t('faq.qBook'), a: t('faq.aBook') }
   ]
 

@@ -1,12 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
+import { useLocation, Link } from 'react-router-dom'
 
 export default function About(){
   const { t } = useLang()
+  // Lazy-loaded sections to reduce initial bundle size
+  const Styles = lazy(() => import('./Styles'))
+  const GalleryPage = lazy(() => import('./GalleryPage'))
   const [loaded, setLoaded] = useState(false)
+  const location = useLocation()
+
+  // Scroll to anchor when navigating to /about#something
+  useEffect(() => {
+    if (!location || !location.hash) return
+    const id = location.hash.replace('#', '')
+    if (!id) return
+    setTimeout(() => {
+      const el = document.getElementById(id)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 50)
+  }, [location])
   
   return (
+    <>
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
       {/* Page Header */}
       <motion.div 
@@ -62,5 +79,39 @@ export default function About(){
         </motion.div>
       </div>
     </section>
+    
+    {/* Styles and Gallery sections included on the same /about page (lazy-loaded) */}
+    <Suspense fallback={
+      <div className="container mx-auto px-4 sm:px-6 py-12">
+        <div className="mx-auto max-w-3xl animate-pulse h-40 rounded-lg bg-black/5" />
+      </div>
+    }>
+      <Styles />
+    </Suspense>
+
+    <Suspense fallback={
+      <div className="container mx-auto px-4 sm:px-6 py-12">
+        <div className="mx-auto max-w-4xl animate-pulse h-56 rounded-lg bg-black/5" />
+      </div>
+    }>
+      <GalleryPage />
+    </Suspense>
+
+    {/* Ready to dance CTA (moved here so it appears after Styles + Gallery) */}
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.6 }} 
+      className="text-center mt-10 sm:mt-12 container mx-auto px-4 sm:px-6"
+    >
+      <h2 className="font-heading text-xl sm:text-2xl mb-3">{t('styles.readyToDance')}</h2>
+      <p className="text-xs sm:text-sm text-black/70 max-w-xl mx-auto mb-6">{t('styles.ctaSubtitle')}</p>
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+        <Link to="/registration" className="inline-block px-6 py-3 rounded-lg bg-gradient-to-br from-[#C9A74A] to-[#B8902F] text-white font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-sm">{t('styles.registerNow')}</Link>
+        <Link to="/classes" className="inline-block px-6 py-3 rounded-lg border-2 border-gold text-gold font-semibold hover:bg-gold hover:text-white transition-all text-sm">{t('styles.viewSchedule')}</Link>
+      </div>
+    </motion.div>
+    </>
   )
 }

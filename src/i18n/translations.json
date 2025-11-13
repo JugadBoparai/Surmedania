@@ -33,7 +33,7 @@
   "news": "News",
       "registration": "Registration",
     "faq": "FAQ",
-    "feedback": "Feedback",
+        "contact": "Contact",
       "a11y": {
         "switchToNo": "Switch language to Norwegian",
         "switchToEn": "Switch language to English",
@@ -135,8 +135,8 @@
       "subtitle": "Join our vibrant dance community",
       "location": "Ravinen, Rælingen",
       "locationTitle": "Location",
-      "thursday": "Thursday 19–21: Adults 16+",
-  "sunday": "Sunday 15–17: Kids under 16",
+      "thursday": "Thursday: Adults 16+",
+  "sunday": "Sunday: Kids under 16",
       "register": "Register Now",
       "scheduleTitle": "Class Schedule",
       "classLabel": "Bhangra Class",
@@ -153,7 +153,22 @@
       "legendKids": "Kids (Sun)",
       "legendEvents": "Special Events",
       "legendHolidays": "Holidays",
-      "downloadFullCalendar": "Download full calendar"
+      "downloadFullCalendar": "Download full calendar",
+      "reminders": {
+        "allLevels": "All levels welcome",
+        "beginners": "Beginners welcome",
+        "bringWater": "Bring water",
+        "goodVibes": "Remember good vibes",
+        "parentsObserve": "Parents may observe"
+      },
+      "details": {
+        "expect": "What to expect",
+        "who": "Who it's for",
+        "bring": "What to bring",
+        "more": "More info"
+      },
+      "showMore": "Show more",
+      "showLess": "Show Less"
     },
     "performances": {
       "title": "Performances",
@@ -385,7 +400,7 @@
   "news": "Nyheter",
       "registration": "Registrering",
       "faq": "FAQ",
-      "feedback": "Tilbakemelding",
+        "contact": "Kontakt oss",
       "a11y": {
         "switchToNo": "Bytt språk til norsk",
         "switchToEn": "Bytt språk til engelsk",
@@ -487,8 +502,8 @@
       "subtitle": "Bli med i vårt livlige dansesamfunn",
       "location": "Ravinen, Rælingen",
       "locationTitle": "Lokasjon",
-      "thursday": "Torsdag 19–21: Voksne 16+",
-  "sunday": "Søndag 15–17: Barn under 16",
+      "thursday": "Torsdag: Voksne 16+",
+  "sunday": "Søndag: Barn under 16",
       "register": "Registrer nå",
       "scheduleTitle": "Timeplan",
       "classLabel": "Bhangra-klasse",
@@ -505,7 +520,22 @@
       "legendKids": "Barn (Søn)",
       "legendEvents": "Spesielle hendelser",
       "legendHolidays": "Helligdager",
-      "downloadFullCalendar": "Last ned full kalender"
+      "downloadFullCalendar": "Last ned full kalender",
+      "reminders": {
+        "allLevels": "Alle nivåer velkomne",
+        "beginners": "Nybegynnere velkomne",
+        "bringWater": "Ta med vann",
+        "goodVibes": "Husk godt humør",
+        "parentsObserve": "Foreldre kan se på"
+      },
+      "details": {
+        "expect": "Hva du kan forvente",
+        "who": "Hvem det er for",
+        "bring": "Hva du skal ta med",
+        "more": "Mer info"
+      },
+      "showMore": "Vis mer",
+      "showLess": "Vis mindre"
     },
     "performances": {
       "title": "Forestilling",
@@ -806,7 +836,7 @@
       "news": "ਖ਼ਬਰਾਂ",
       "registration": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ",
       "faq": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਂਦੇ ਸਵਾਲ",
-      "feedback": "ਫੀਡਬੈਕ",
+        "contact": "ਸੰਪਰਕ",
       "a11y": {
         "switchToNo": "ਭਾਸ਼ਾ ਨਾਰਵੇਜੀਅਨ ਤੇ ਬਦਲੋ",
         "switchToEn": "ਭਾਸ਼ਾ ਅੰਗਰੇਜ਼ੀ ਤੇ ਬਦਲੋ",
@@ -908,8 +938,8 @@
       "subtitle": "ਸਾਡੇ ਜੀਵੰਤ ਡਾਂਸ ਭਾਈਚਾਰੇ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ",
       "location": "ਰਾਵੀਨੇਨ, ਰੈਲਿੰਗਨ",
       "locationTitle": "ਸਥਾਨ",
-      "thursday": "ਵੀਰਵਾਰ 19–21: ਬਾਲਗ 16+",
-      "sunday": "ਐਤਵਾਰ 15–17: 16 ਸਾਲ ਤੋਂ ਘੱਟ ਉਮਰ ਦੇ ਬੱਚੇ",
+      "thursday": "ਵੀਰਵਾਰ: ਬਾਲਗ 16+",
+      "sunday": "ਐਤਵਾਰ: 16 ਸਾਲ ਤੋਂ ਘੱਟ ਉਮਰ ਦੇ ਬੱਚੇ",
       "register": "ਹੁਣੇ ਰਜਿਸਟਰ ਕਰੋ",
       "scheduleTitle": "ਕਲਾਸ ਸਮਾਂ-ਸਾਰਣੀ",
       "classLabel": "ਭਾਂਗੜਾ ਕਲਾਸ",
@@ -926,7 +956,22 @@
       "legendKids": "ਬੱਚੇ (ਐਤ)",
       "legendEvents": "ਖਾਸ ਸਮਾਗਮ",
       "legendHolidays": "ਛੁੱਟੀਆਂ",
-      "downloadFullCalendar": "ਪੂਰਾ ਕੈਲੰਡਰ ਡਾਊਨਲੋਡ ਕਰੋ"
+      "downloadFullCalendar": "ਪੂਰਾ ਕੈਲੰਡਰ ਡਾਊਨਲੋਡ ਕਰੋ",
+      "reminders": {
+        "allLevels": "ਸਾਰੇ ਪੱਧਰ ਸਵਾਗਤ ਹਨ",
+        "beginners": "ਸ਼ੁਰੂਆਤੀ ਸਵਾਗਤ ਹਨ",
+        "bringWater": "ਪਾਣੀ ਲਿਆਓ",
+        "goodVibes": "ਚੰਗੀ ਵਾਇਬ ਯਾਦ ਰੱਖੋ",
+        "parentsObserve": "ਮਾਤਾ-ਪਿਤਾ ਵੇਖ ਸਕਦੇ ਹਨ"
+      },
+      "details": {
+        "expect": "ਕੀ ਉਮੀਦ ਕਰਨੀ ਹੈ",
+        "who": "ਇਹ ਕਿਸ ਲਈ ਹੈ",
+        "bring": "ਕੀ ਲਿਆਉਣਾ ਹੈ",
+        "more": "ਹੋਰ ਜਾਣਕਾਰੀ"
+      },
+      "showMore": "ਹੋਰ ਵਿਖਾਓ",
+      "showLess": "ਘੱਟ ਵਿਖਾਓ"
     },
     "performances": {
       "title": "ਪ੍ਰਦਰਸ਼ਨ",

@@ -60,20 +60,15 @@ export default function Header(){
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
-       <NavLink to="/" className={navClass}>{t('nav.home')}</NavLink>
        <NavLink to="/about" className={navClass}>{t('nav.about')}</NavLink>
        <NavLink to="/classes" className={navClass}>{t('nav.classes')}</NavLink>
-          <NavLink to="/styles" className={navClass}>{t('nav.styles', 'Styles')}</NavLink>
-       <NavLink to="/gallery" className={navClass}>{t('nav.gallery')}</NavLink>
-  <NavLink to="/news" className={navClass}>{t('nav.news')}</NavLink>
-          <NavLink to="/merch" className={navClass}>{t('nav.merch', 'Merch')}</NavLink>
+       <NavLink to="/news" className={navClass}>{t('nav.news')}</NavLink>
+       <NavLink to="/merch" className={navClass}>{t('nav.merch', 'Merch')}</NavLink>
        <NavLink to="/faq" className={navClass}>{t('nav.faq')}</NavLink>
-       <NavLink to="/feedback" className={navClass}>{t('nav.feedback')}</NavLink>
+       <NavLink to="/feedback" className={navClass}>{t('nav.contact')}</NavLink>
         </nav>
 
         <div className="flex items-center gap-4">
-          <LanguageSwitcher />
-          
           {/* Shopping Cart Button */}
           <button
             onClick={toggleCart}
@@ -109,6 +104,8 @@ export default function Header(){
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
+
+          <LanguageSwitcher />
         </div>
 
         {createPortal(
@@ -170,12 +167,10 @@ export default function Header(){
                     <NavLink onClick={() => setOpen(false)} to="/" className={navClass}>{t('nav.home')}</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/about" className={navClass}>{t('nav.about')}</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/classes" className={navClass}>{t('nav.classes')}</NavLink>
-                    <NavLink onClick={() => setOpen(false)} to="/styles" className={navClass}>{t('nav.styles', 'Styles')}</NavLink>
-                    <NavLink onClick={() => setOpen(false)} to="/gallery" className={navClass}>{t('nav.gallery')}</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/news" className={navClass}>{t('nav.news')}</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/merch" className={navClass}>{t('nav.merch', 'Merch')}</NavLink>
                     <NavLink onClick={() => setOpen(false)} to="/faq" className={navClass}>{t('nav.faq')}</NavLink>
-                    <NavLink onClick={() => setOpen(false)} to="/feedback" className={navClass}>{t('nav.feedback')}</NavLink>
+                    <NavLink onClick={() => setOpen(false)} to="/feedback" className={navClass}>{t('nav.contact')}</NavLink>
                     <Link
                       to="/registration"
                       onClick={() => setOpen(false)}

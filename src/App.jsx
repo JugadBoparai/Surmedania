@@ -36,17 +36,16 @@ export default function App(){
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/classes" element={<Classes />} />
-              <Route path="/gallery" element={<GalleryPage />} />
+              {/* Gallery and Styles are now sections within /about */}
               <Route path="/news" element={<NewsPage />} />
               <Route path="/registration" element={<RegistrationPage />} />
               <Route path="/registration/confirm" element={<RegistrationConfirm />} />
               <Route path="/registration/payment-complete" element={<PaymentComplete />} />
               <Route path="/faq" element={<FAQPage />} />
               <Route path="/feedback" element={<FeedbackPage />} />
-              <Route path="/styles" element={<Styles />} />
               <Route path="/merch" element={<MerchPage />} />
               <Route path="/merch/checkout" element={<CheckoutPage />} />
-              <Route path="/merch/order-complete" element={<OrderCompletePage />} />
+                <Route path="/merch/order-complete" element={<OrderCompletePage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

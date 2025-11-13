@@ -123,11 +123,12 @@ export default function Styles() {
   }
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+    <section id="styles" className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
       {/* Page Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.5 }}
         className="text-center mb-10 sm:mb-12"
       >
@@ -143,8 +144,9 @@ export default function Styles() {
           <motion.div
             key={style.id}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: idx * 0.1 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
             className="lux-card p-6 sm:p-8 hover:shadow-xl transition-all"
           >
             {/* Style Icon & Name */}
@@ -228,31 +230,6 @@ export default function Styles() {
           </motion.div>
         ))}
       </div>
-
-      {/* Bottom CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
-        className="text-center mt-10 sm:mt-12"
-      >
-        <h2 className="font-heading text-xl sm:text-2xl mb-3">{t('styles.readyToDance')}</h2>
-        <p className="text-xs sm:text-sm text-black/70 max-w-xl mx-auto mb-6">{t('styles.ctaSubtitle')}</p>
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <Link
-            to="/registration"
-            className="inline-block px-6 py-3 rounded-lg bg-gradient-to-br from-[#C9A74A] to-[#B8902F] text-white font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all text-sm"
-          >
-                          {t('styles.registerNow')}
-          </Link>
-          <Link
-            to="/classes"
-            className="inline-block px-6 py-3 rounded-lg border-2 border-gold text-gold font-semibold hover:bg-gold hover:text-white transition-all text-sm"
-          >
-            {t('styles.viewSchedule')}
-          </Link>
-        </div>
-      </motion.div>
     </section>
   )
 }
