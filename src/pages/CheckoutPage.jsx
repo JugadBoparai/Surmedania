@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import Breadcrumb from '../components/Breadcrumb'
 import { useCart } from '../context/CartContext'
 import { useLang } from '../context/LanguageContext'
 
@@ -66,23 +67,58 @@ export default function CheckoutPage() {
   if (cart.length === 0) {
     return (
       <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="text-6xl mb-4">🛍️</div>
-          <h2 className="font-heading text-2xl mb-3">{t('checkout.emptyCart') || 'Your cart is empty'}</h2>
-          <p className="text-black/60 mb-6">{t('checkout.emptyCartMessage') || 'Add some items to your cart before checking out'}</p>
-          <button
-            onClick={() => navigate('/merch')}
-            className="px-6 py-3 bg-gradient-to-r from-gold to-[#B8902F] text-white font-medium rounded-lg hover:shadow-lg transition-all"
-          >
-            {t('merch.continueShopping') || 'Continue shopping'}
-          </button>
-        </div>
+        <Breadcrumb items={[
+          { label: t('nav.merch') || 'Merch', path: '/merch' },
+          { label: t('checkout.title') || 'Checkout', path: '/merch/checkout' }
+        ]} />
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-2xl mx-auto"
+        >
+          <div className="lux-card p-8 sm:p-12 text-center">
+            {/* Empty state illustration */}
+            <div className="relative inline-block mb-6">
+              <div className="text-8xl text-gold/20">🛒</div>
+              <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-br from-gold/20 to-gold/10 rounded-full flex items-center justify-center">
+                <span className="text-3xl">💳</span>
+              </div>
+            </div>
+            
+            <h2 className="font-heading text-2xl sm:text-3xl mb-3 text-black/90">
+              {t('checkout.emptyTitle') || 'Nothing to checkout yet'}
+            </h2>
+            <p className="text-black/60 mb-8 text-sm sm:text-base max-w-md mx-auto leading-relaxed">
+              {t('checkout.emptyMessage') || 'Your cart is empty! Browse our exclusive merchandise and add items to checkout.'}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button
+                onClick={() => navigate('/merch')}
+                className="px-8 py-3 bg-gradient-to-r from-gold to-[#B8902F] text-white font-semibold rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all"
+              >
+                {t('merch.browseMerch') || 'Browse Merch'}
+              </button>
+              <button
+                onClick={() => navigate('/')}
+                className="px-8 py-3 border-2 border-gold/30 text-gold font-semibold rounded-lg hover:border-gold hover:bg-gold/5 transition-all"
+              >
+                {t('nav.home') || 'Go Home'}
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </section>
     )
   }
 
   return (
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <Breadcrumb items={[
+        { label: t('nav.merch') || 'Merch', path: '/merch' },
+        { label: t('checkout.title') || 'Checkout', path: '/merch/checkout' }
+      ]} />
+      
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

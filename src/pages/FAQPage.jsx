@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import Breadcrumb from '../components/Breadcrumb'
+import SEO from '../components/SEO'
 import FAQAccordion from '../components/FAQAccordion'
 import { useLang } from '../context/LanguageContext'
 
@@ -65,6 +67,13 @@ export default function FAQPage(){
 
   return (
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <SEO 
+        title="FAQ - Frequently Asked Questions"
+        description="Find answers to common questions about Surmedania Dance School including class schedules, membership, what to wear, locations, and more. Get all the info you need to get started."
+        keywords="dance class faq, surmedania questions, bhangra class info, dance school help"
+        canonicalPath="/faq"
+      />
+      <Breadcrumb items={[{ label: t('nav.faq') || 'FAQ', path: '/faq' }]} />
       {/* Hero Section */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}

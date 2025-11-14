@@ -1,5 +1,6 @@
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import { LanguageProvider } from './context/LanguageContext'
 import { CartProvider } from './context/CartContext'
 import Header from './components/Header'
@@ -25,9 +26,10 @@ import OrderCompletePage from './pages/OrderCompletePage'
 
 export default function App(){
   return (
-    <LanguageProvider>
-      <CartProvider>
-        <div className="min-h-screen flex flex-col bg-offwhite">
+    <HelmetProvider>
+      <LanguageProvider>
+        <CartProvider>
+          <div className="min-h-screen flex flex-col bg-offwhite">
           <Header />
           <ScrollToTop />
           <Cart />
@@ -51,8 +53,9 @@ export default function App(){
           </main>
           <Footer />
           <DevI18nPanel />
-        </div>
-      </CartProvider>
-    </LanguageProvider>
+          </div>
+        </CartProvider>
+      </LanguageProvider>
+    </HelmetProvider>
   )
 }

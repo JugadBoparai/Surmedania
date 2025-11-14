@@ -21,14 +21,34 @@ export default function Footer(){
       {/* soft pattern backdrop */}
       <div className="pointer-events-none absolute inset-0 bg-phulkari-pattern opacity-[0.04] bg-[length:180px_180px] bg-repeat" />
 
-      <div className="relative container mx-auto px-4 sm:px-6 py-4 sm:py-6">
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-4">
+      <div className="relative container mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        {/* Main Footer Content */}
+        <div className="grid gap-8 sm:gap-10 md:grid-cols-3 mb-8">
+          {/* Brand Section */}
+          <div className="md:col-span-1">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gold to-gold/70 flex items-center justify-center">
+                <span className="text-white font-bold text-sm">S</span>
+              </div>
+              <div>
+                <h3 className="font-heading text-lg leading-tight text-deepblack">Surmedania</h3>
+                <p className="text-xs text-gold">Dance School</p>
+              </div>
+            </div>
+            <p className="text-sm text-deepblack/70 leading-relaxed mb-4">
+              {t('footer.tagline') || 'Celebrating Punjabi culture through authentic Bhangra and folk dance in Rælingen, Norway.'}
+            </p>
+          </div>
+
           {/* Contact Section */}
-          <div>
-            <h3 className="font-heading text-base sm:text-lg mb-2 tracking-wide text-deepblack/90">Kontakt oss</h3>
-            <div className="font-heading text-lg sm:text-xl leading-tight text-deepblack mb-2">Surmedania Dance School</div>
-            <address className="not-italic text-sm text-deepblack/70 mb-2 leading-relaxed" aria-label={t('footer.address')}>{t('footer.address')}</address>
-            <ul className="space-y-1.5 text-sm">
+          <div className="md:col-span-1">
+            <h3 className="font-heading text-base sm:text-lg mb-3 tracking-wide text-deepblack/90 border-b border-gold/20 pb-2">Kontakt oss</h3>
+            <address className="not-italic text-sm text-deepblack/70 mb-3 leading-relaxed" aria-label={t('footer.address')}>
+              <span className="font-medium text-deepblack/80">Ravinen, Rælingen</span><br />
+              Øvre Rælingsveg 203<br />
+              2008 Fjerdingby, Norway
+            </address>
+            <ul className="space-y-2 text-sm">
               <li className="flex items-start gap-3">
                 <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 text-gold flex-shrink-0 mt-0.5"><path fill="currentColor" d="M3 5a2 2 0 0 1 2-2h3.3a2 2 0 0 1 1.9 1.37l1.1 3.3a2 2 0 0 1-.9 2.37l-1.8 1.08a11 11 0 0 0 5.2 5.2l1.07-1.8a2 2 0 0 1 2.38-.9l3.3 1.1A2 2 0 0 1 21 17v2a2 2 0 0 1-2 2h-.5C9.61 21 3 14.39 3 6.5V5Z"/></svg>
                 <span className="text-deepblack/70 leading-relaxed">
@@ -46,11 +66,11 @@ export default function Footer(){
             </ul>
           </div>
 
-          {/* Social Section */}
-          <div className="text-center md:text-left md:ml-32">
-            <h3 id="footer-social-heading" className="font-heading text-base sm:text-lg mb-2 tracking-wide text-deepblack/90">{t('footer.follow') || 'Follow'}</h3>
+          {/* Quick Links & Social Section */}
+          <div className="md:col-span-1">
+            <h3 id="footer-social-heading" className="font-heading text-base sm:text-lg mb-3 tracking-wide text-deepblack/90 border-b border-gold/20 pb-2">{t('footer.follow') || 'Connect'}</h3>
             <nav aria-labelledby="footer-social-heading">
-              <ul className="flex flex-col sm:flex-row sm:flex-wrap items-center md:items-start gap-2">
+              <ul className="flex flex-col gap-2 mb-4">
                 <li className="w-full sm:w-auto">
                   <a
                     href="https://www.instagram.com/surmedania?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
@@ -80,18 +100,40 @@ export default function Footer(){
           </div>
         </div>
 
-        {/* Copyright Section - At the very bottom */}
-        <div className="text-center text-xs text-deepblack/60 space-y-0.5">
-          <p>© {new Date().getFullYear()} Surmedania. {tEn('footer.rightsReserved', 'All rights reserved.')}</p>
-          <a
-            href="https://JugadBoparai.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${tEn('footer.credit')} ${tEn('footer.opensNewTab')}`}
-            className="inline-block hover:text-deepblack/80 hover:underline underline-offset-2 transition"
-          >
-            {tEn('footer.credit')}
-          </a>
+        {/* Divider */}
+        <div className="relative my-6">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-gold/20"></div>
+          </div>
+          <div className="relative flex justify-center">
+            <div className="bg-white px-4">
+              <div className="w-2 h-2 rounded-full bg-gold/30"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright Section */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-deepblack/60">
+          <div className="flex items-center gap-2">
+            <p>© {new Date().getFullYear()} Surmedania Dance School.</p>
+            <span className="hidden sm:inline text-deepblack/40">•</span>
+            <p className="hidden sm:inline">{tEn('footer.rightsReserved', 'All rights reserved.')}</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href="/privacy" className="hover:text-gold transition-colors">Privacy</a>
+            <span className="text-deepblack/40">•</span>
+            <a href="/terms" className="hover:text-gold transition-colors">Terms</a>
+            <span className="text-deepblack/40">•</span>
+            <a
+              href="https://JugadBoparai.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${tEn('footer.credit')} ${tEn('footer.opensNewTab')}`}
+              className="hover:text-gold transition-colors"
+            >
+              {tEn('footer.credit') || 'Made with ❤️'}
+            </a>
+          </div>
         </div>
       </div>
     </footer>

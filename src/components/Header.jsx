@@ -53,10 +53,14 @@ export default function Header(){
   ].join(' ')
 
   return (
-    <header className={`sticky top-0 z-50 border-b transition-all ${scrolled ? 'border-black/5 bg-white/80 supports-[backdrop-filter]:bg-white/60 backdrop-blur-sm shadow-sm' : 'border-white/40 bg-gradient-to-r from-offwhite to-white/90'}`}>
+    <header className={`sticky top-0 z-50 border-b transition-all ${scrolled ? 'border-black/5 bg-white/95 supports-[backdrop-filter]:bg-white/80 backdrop-blur-md shadow-lg' : 'border-gold/10 bg-gradient-to-r from-white via-offwhite to-white shadow-sm'}`}>
       <div className="container mx-auto px-6 py-3 md:py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3" aria-label={t('nav.a11y.home')}>
-          <img src={logoUrl} alt={t('common.logoAlt')} className="w-28 h-auto" />
+        <Link to="/" className="flex items-center gap-3 group" aria-label={t('nav.a11y.home')}>
+          <img src={logoUrl} alt={t('common.logoAlt')} className="w-28 h-auto transition-transform group-hover:scale-105" />
+          <div className="hidden lg:flex flex-col">
+            <span className="text-xs font-medium text-gold uppercase tracking-wider">{t('common.brandTagline') || 'Dance School'}</span>
+            <span className="text-[10px] text-black/40">Est. 2024 • Rælingen</span>
+          </div>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

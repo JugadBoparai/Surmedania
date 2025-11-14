@@ -1,6 +1,8 @@
 import React, { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import ClassCard from '../components/ClassCard'
+import Breadcrumb from '../components/Breadcrumb'
+import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import classContent from '../data/classes.json'
 import { getLocalized } from '../utils/i18n'
@@ -98,6 +100,13 @@ export default function Classes(){
   }
   return (
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <SEO 
+        title="Classes & Schedule"
+        description="View our weekly Bhangra dance class schedule at Marikollen Kultursal in Rælingen. Thursday and Sunday sessions for all skill levels. Check our calendar for upcoming events and holidays."
+        keywords="bhangra classes, dance schedule rælingen, thursday dance class, sunday dance class, marikollen kultursal"
+        canonicalPath="/classes"
+      />
+      <Breadcrumb items={[{ label: t('nav.classes') || 'Classes', path: '/classes' }]} />
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

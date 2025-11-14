@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import Breadcrumb from '../components/Breadcrumb'
+import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 
 const API_BASE = import.meta.env.VITE_WEBHOOK_URL?.replace(/\/webhook$/, '') || '/api'
@@ -42,6 +44,14 @@ export default function FeedbackPage() {
 
   return (
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <SEO 
+        title="Contact Us"
+        description="Get in touch with Surmedania Dance School. Share your feedback, ask questions, or reach out for more information. We'd love to hear from you!"
+        keywords="contact surmedania, dance school contact, feedback, get in touch, surmedania email"
+        canonicalPath="/feedback"
+      />
+      <Breadcrumb items={[{ label: t('nav.contact') || 'Contact', path: '/feedback' }]} />
+      
       {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

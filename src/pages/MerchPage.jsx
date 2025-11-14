@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Breadcrumb from '../components/Breadcrumb'
+import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import { useCart } from '../context/CartContext'
 
@@ -193,9 +195,15 @@ export default function MerchPage() {
 
   return (
     <>
-      <section className="relative container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <SEO 
+        title=\"Merch Store\"
+        description=\"Shop exclusive Surmedania merchandise including hoodies, t-shirts, crewneck sweatshirts, and accessories. Show your dance school pride with our premium apparel and gear.\"
+        keywords=\"surmedania merch, dance school apparel, bhangra clothing, surmedania hoodie, dance merchandise norway\"
+        canonicalPath=\"/merch\"
+      />
+      <section className=\"relative container mx-auto px-4 sm:px-6 py-12 sm:py-16\">
         {/* Decorative background */}
-        <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className=\"absolute inset-0 -z-10 overflow-hidden\">
           <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-gold/5 via-gold/10 to-transparent rounded-full blur-3xl" />
           <div className="absolute bottom-20 left-10 w-72 h-72 bg-gradient-to-tr from-gold/5 via-gold/10 to-transparent rounded-full blur-3xl" />
         </div>

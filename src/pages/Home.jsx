@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import SEO from '../components/SEO'
 import { Link } from 'react-router-dom'
 import { useLang } from '../context/LanguageContext'
 import { motion } from 'framer-motion'
@@ -18,6 +19,12 @@ export default function Home(){
   
   return (
     <div>
+      <SEO 
+        title="Home"
+        description="Join Surmedania Dance School for authentic Bhangra and Punjabi folk dance classes in Rælingen. Open to all ages and skill levels. Experience the joy of dance and cultural celebration."
+        keywords="bhangra dance, punjabi dance, dance school rælingen, surmedania, dance classes norway, cultural dance, indian dance norway"
+        canonicalPath="/"
+      />
       <Hero />
 
       {/* Why Choose Us Section */}

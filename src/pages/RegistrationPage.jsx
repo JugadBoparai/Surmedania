@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import Breadcrumb from '../components/Breadcrumb'
+import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 
 const SPOND_LINK = 'https://spond.example/group' // Replace with real Spond group link
@@ -57,10 +59,17 @@ export default function RegistrationPage(){
 
   return (
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <SEO 
+        title="Registration"
+        description="Register for Bhangra dance classes at Surmedania. Choose between Active Membership with full class participation or Supported Membership to help our mission. Join our community today!"
+        keywords="dance registration, join surmedania, bhangra class registration, dance school signup, membership"
+        canonicalPath="/registration"
+      />
+      <Breadcrumb items={[{ label: t('nav.registration') || 'Registration', path: '/registration' }]} />
       <h2 className="font-heading text-2xl sm:text-3xl mb-6 sm:mb-8">{t('registration.title')}</h2>
 
       <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-        <div className="lux-card p-5 sm:p-6 md:p-7">
+        <div className="lux-card p-5 sm:p-6 md:p-7 order-2 md:order-1">
           <div className="flex gap-2 sm:gap-3 mb-6">
             <button 
               onClick={()=>setMemberType('active')} 
@@ -231,7 +240,7 @@ export default function RegistrationPage(){
           )}
         </div>
 
-        <div className="lux-card p-5 sm:p-6 md:p-7">
+        <div className="lux-card p-5 sm:p-6 md:p-7 order-1 md:order-2">
           <h3 className="font-heading text-lg sm:text-xl mb-4">{memberType==='active' ? (t('registration.active') + ' ' + (t('registration.title'))) : (t('registration.supported') + ' ' + (t('registration.title')))}</h3>
           
           {memberType === 'active' ? (

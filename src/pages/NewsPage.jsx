@@ -1,10 +1,14 @@
 import React, { useEffect, useState, useMemo } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Breadcrumb from '../components/Breadcrumb'
+import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import { motion } from 'framer-motion'
 import newsData from '../data/news.json'
 
 export default function NewsPage(){
   const { lang, t } = useLang()
+  const navigate = useNavigate()
   const [items, setItems] = useState(newsData)
 
   const today = useMemo(() => new Date(), [])
@@ -114,6 +118,14 @@ export default function NewsPage(){
 
   return (
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <SEO 
+        title="News & Events"
+        description="Stay updated with the latest news, performances, and upcoming events from Surmedania Dance School. Check out our event calendar and don't miss any exciting shows or workshops."
+        keywords="surmedania events, dance performances, upcoming shows, bhangra events norway, dance news"
+        canonicalPath="/news"
+      />
+      <Breadcrumb items={[{ label: t('nav.news') || 'News', path: '/news' }]} />
+      
       {/* Hero */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
@@ -128,6 +140,51 @@ export default function NewsPage(){
           {t('news.subtitle')}
         </p>
       </motion.div>
+
+      {/* Empty State - No Events */}
+      {upcoming.length === 0 && past.length === 0 && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="max-w-2xl mx-auto"
+        >
+          <div className="lux-card p-8 sm:p-12 text-center">
+            <div className="relative inline-block mb-6">
+              <div className="text-8xl text-gold/20">📅</div>
+              <div className="absolute -top-2 -right-2 w-12 h-12 bg-gradient-to-br from-gold/20 to-gold/10 rounded-full flex items-center justify-center">
+                <span className="text-2xl">✨</span>
+              </div>
+            </div>
+            
+            <h2 className="font-heading text-2xl sm:text-3xl mb-3 text-black/90">
+              {t('news.noEvents') || 'No events scheduled yet'}
+            </h2>
+            <p className="text-black/60 mb-8 text-sm sm:text-base max-w-md mx-auto leading-relaxed">
+              {t('news.noEventsMessage') || 'Stay tuned! We\'re planning exciting performances and workshops. Check back soon or follow us on social media for updates.'}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="https://www.instagram.com/surmedania"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-gold to-[#B8902F] text-white font-semibold rounded-lg shadow-md hover:shadow-xl hover:-translate-y-0.5 transition-all"
+              >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM18 6.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>
+                <span>{t('footer.instagram') || 'Follow on Instagram'}</span>
+              </a>
+              <button
+                onClick={() => navigate('/classes')}
+                className="px-6 py-3 border-2 border-gold/30 text-gold font-semibold rounded-lg hover:border-gold hover:bg-gold/5 transition-all"
+              >
+                {t('news.viewClasses') || 'View Classes'}
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      )}
 
       {/* Featured Event */}
       {upcoming.length > 0 && (

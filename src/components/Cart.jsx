@@ -54,15 +54,29 @@ export default function Cart() {
             {/* Cart Items */}
             <div className="flex-1 overflow-y-auto p-6">
               {cart.length === 0 ? (
-                <div className="flex flex-col items-center justify-center h-full text-center">
-                  <div className="text-6xl mb-4 text-gold/20">🛍️</div>
-                  <p className="text-black/60 mb-2">{t('merch.emptyCart') || 'Your cart is empty'}</p>
+                <div className="flex flex-col items-center justify-center h-full text-center px-4 py-8">
+                  {/* Animated empty cart illustration */}
+                  <div className="relative mb-6">
+                    <div className="text-8xl text-gold/20 animate-bounce">🛒</div>
+                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gold/10 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">✨</span>
+                    </div>
+                  </div>
+                  <h3 className="font-heading text-xl text-black/90 mb-2">
+                    {t('cart.emptyTitle') || 'Your cart is waiting'}
+                  </h3>
+                  <p className="text-sm text-black/60 mb-6 max-w-xs">
+                    {t('cart.emptyMessage') || 'Add some amazing Surmedania merch to get started. Check out our exclusive collection!'}
+                  </p>
                   <Link
                     to="/merch"
                     onClick={toggleCart}
-                    className="text-gold font-medium hover:underline text-sm"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-gold to-[#B8902F] text-white font-medium rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all"
                   >
-                    {t('merch.continueShopping') || 'Continue shopping'}
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span>{t('merch.shopNow') || 'Shop Now'}</span>
                   </Link>
                 </div>
               ) : (

@@ -1,5 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
+import Breadcrumb from '../components/Breadcrumb'
+import SEO from '../components/SEO'
 import { useLang } from '../context/LanguageContext'
 import { useLocation, Link } from 'react-router-dom'
 
@@ -24,7 +26,15 @@ export default function About(){
   
   return (
     <>
+    <SEO 
+      title="About Us"
+      description="Learn about Surmedania Dance School's mission to celebrate Punjabi culture through authentic Bhangra and folk dance. Meet our founder and discover our dance styles including Bhangra, Giddha, and more."
+      keywords="surmedania founder, punjabi dance styles, bhangra giddha, cultural dance norway, about surmedania"
+      canonicalPath="/about"
+      image="/founder.jpeg"
+    />
     <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <Breadcrumb items={[{ label: t('nav.about') || 'About', path: '/about' }]} />
       {/* Page Header */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}

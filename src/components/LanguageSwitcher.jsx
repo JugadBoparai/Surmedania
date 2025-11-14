@@ -50,8 +50,6 @@ export default function LanguageSwitcher({ className = '', variant = 'dropdown' 
     <div 
       ref={dropdownRef} 
       className={`relative inline-block ${className}`}
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
     >
       {/* Dropdown trigger button - compact, flag only */}
       <button
