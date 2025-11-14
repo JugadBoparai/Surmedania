@@ -33,9 +33,12 @@ export function CartProvider({ children }) {
 
   const addToCart = (item) => {
     setCart((prevCart) => {
-      // Check if item already exists (same id and size)
+      // Check if item already exists (same id, size, and color)
       const existingIndex = prevCart.findIndex(
-        (cartItem) => cartItem.id === item.id && cartItem.size === item.size
+        (cartItem) => 
+          cartItem.id === item.id && 
+          cartItem.size === item.size &&
+          cartItem.color === item.color
       )
 
       if (existingIndex !== -1) {
@@ -53,21 +56,21 @@ export function CartProvider({ children }) {
     })
   }
 
-  const removeFromCart = (itemId, size) => {
+  const removeFromCart = (itemId, size, color) => {
     setCart((prevCart) =>
-      prevCart.filter((item) => !(item.id === itemId && item.size === size))
+      prevCart.filter((item) => !(item.id === itemId && item.size === size && item.color === color))
     )
   }
 
-  const updateQuantity = (itemId, size, quantity) => {
+  const updateQuantity = (itemId, size, color, quantity) => {
     if (quantity <= 0) {
-      removeFromCart(itemId, size)
+      removeFromCart(itemId, size, color)
       return
     }
 
     setCart((prevCart) =>
       prevCart.map((item) =>
-        item.id === itemId && item.size === size
+        item.id === itemId && item.size === size && item.color === color
           ? { ...item, quantity }
           : item
       )

@@ -34,6 +34,7 @@
       "registration": "Registration",
     "faq": "FAQ",
         "contact": "Contact",
+      "merch": "Merch",
       "a11y": {
         "switchToNo": "Switch language to Norwegian",
         "switchToEn": "Switch language to English",
@@ -64,6 +65,9 @@
       "event": "Event",
       "viewOnMap": "View on map",
       "gallery": "Gallery"
+    },
+    "cart": {
+      "openCart": "Open cart"
     },
     "styles": {
       "title": "Dance Styles",
@@ -251,11 +255,14 @@
     "merch": {
       "title": "Merch Store",
       "subtitle": "Show your Surmedania pride with our exclusive merchandise",
-      "categoryAll": "All",
-      "categoryClothing": "Clothing",
-      "categoryAccessories": "Accessories",
+      "category": {
+        "all": "All",
+        "clothing": "Clothing",
+        "accessories": "Accessories"
+      },
       "addToCart": "Add to Cart",
       "selectSize": "Select size",
+      "selectColor": "Select color",
       "viewDetails": "View Details",
       "cart": "Cart",
       "emptyCart": "Your cart is empty",
@@ -401,6 +408,7 @@
       "registration": "Registrering",
       "faq": "FAQ",
         "contact": "Kontakt oss",
+      "merch": "Merch",
       "a11y": {
         "switchToNo": "Bytt språk til norsk",
         "switchToEn": "Bytt språk til engelsk",
@@ -431,6 +439,9 @@
       "event": "Hendelse",
       "viewOnMap": "Se på kartet",
       "gallery": "Galleri"
+    },
+    "cart": {
+      "openCart": "Åpne handlekurv"
     },
     "styles": {
       "title": "Dansestiler",
@@ -611,13 +622,16 @@
       "minimumError": "Minimumsbetaling er 50 NOK"
     },
     "merch": {
-      "title": "Butikk",
+      "title": "Merch Butikk",
       "subtitle": "Vis din Surmedania-stolthet med våre eksklusive produkter",
-      "categoryAll": "Alle",
-      "categoryClothing": "Klær",
-      "categoryAccessories": "Tilbehør",
+      "category": {
+        "all": "Alle",
+        "clothing": "Klær",
+        "accessories": "Tilbehør"
+      },
       "addToCart": "Legg til i handlekurv",
       "selectSize": "Velg størrelse",
+      "selectColor": "Velg farge",
       "viewDetails": "Se detaljer",
       "cart": "Handlekurv",
       "emptyCart": "Handlekurven din er tom",
@@ -754,11 +768,14 @@
     "merch": {
       "title": "ਦੁਕਾਨ",
       "subtitle": "ਸਾਡੇ ਵਿਸ਼ੇਸ਼ ਉਤਪਾਦਾਂ ਨਾਲ ਆਪਣਾ Surmedania ਮਾਣ ਦਿਖਾਓ",
-      "categoryAll": "ਸਾਰੇ",
-      "categoryClothing": "ਕੱਪੜੇ",
-      "categoryAccessories": "ਸਹਾਇਕ ਸਮੱਗਰੀ",
+      "category": {
+        "all": "ਸਾਰੇ",
+        "clothing": "ਕੱਪੜੇ",
+        "accessories": "ਸਹਾਇਕ ਸਮੱਗਰੀ"
+      },
       "addToCart": "ਕਾਰਟ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ",
       "selectSize": "ਸਾਈਜ਼ ਚੁਣੋ",
+      "selectColor": "ਰੰਗ ਚੁਣੋ",
       "viewDetails": "ਵੇਰਵੇ ਵੇਖੋ",
       "cart": "ਕਾਰਟ",
       "emptyCart": "ਤੁਹਾਡੀ ਕਾਰਟ ਖਾਲੀ ਹੈ",
@@ -837,6 +854,7 @@
       "registration": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ",
       "faq": "ਅਕਸਰ ਪੁੱਛੇ ਜਾਂਦੇ ਸਵਾਲ",
         "contact": "ਸੰਪਰਕ",
+      "merch": "ਮਰਚ",
       "a11y": {
         "switchToNo": "ਭਾਸ਼ਾ ਨਾਰਵੇਜੀਅਨ ਤੇ ਬਦਲੋ",
         "switchToEn": "ਭਾਸ਼ਾ ਅੰਗਰੇਜ਼ੀ ਤੇ ਬਦਲੋ",
@@ -867,6 +885,9 @@
       "event": "ਸਮਾਗਮ",
       "viewOnMap": "ਨਕਸ਼ੇ ਤੇ ਵੇਖੋ",
       "gallery": "ਗੈਲਰੀ"
+    },
+    "cart": {
+      "openCart": "ਕਾਰਟ ਖੋਲ੍ਹੋ"
     },
     "styles": {
       "title": "ਡਾਂਸ ਸਟਾਈਲਾਂ",

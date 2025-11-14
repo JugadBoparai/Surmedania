@@ -57,12 +57,13 @@ export default function Cart() {
                 <div className="flex flex-col items-center justify-center h-full text-center">
                   <div className="text-6xl mb-4 text-gold/20">🛍️</div>
                   <p className="text-black/60 mb-2">{t('merch.emptyCart') || 'Your cart is empty'}</p>
-                  <button
+                  <Link
+                    to="/merch"
                     onClick={toggleCart}
                     className="text-gold font-medium hover:underline text-sm"
                   >
                     {t('merch.continueShopping') || 'Continue shopping'}
-                  </button>
+                  </Link>
                 </div>
               ) : (
                 <div className="space-y-4">
@@ -95,7 +96,7 @@ export default function Cart() {
                         {/* Quantity Controls */}
                         <div className="flex items-center gap-2 mt-2">
                           <button
-                            onClick={() => updateQuantity(item.id, item.size, item.quantity - 1)}
+                            onClick={() => updateQuantity(item.id, item.size, item.color, item.quantity - 1)}
                             className="w-7 h-7 rounded-full border-2 border-black/20 hover:border-gold hover:bg-gold/5 flex items-center justify-center transition-colors"
                           >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,7 +105,7 @@ export default function Cart() {
                           </button>
                           <span className="text-sm font-medium w-8 text-center">{item.quantity || 1}</span>
                           <button
-                            onClick={() => updateQuantity(item.id, item.size, item.quantity + 1)}
+                            onClick={() => updateQuantity(item.id, item.size, item.color, item.quantity + 1)}
                             className="w-7 h-7 rounded-full border-2 border-black/20 hover:border-gold hover:bg-gold/5 flex items-center justify-center transition-colors"
                           >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,7 +113,7 @@ export default function Cart() {
                             </svg>
                           </button>
                           <button
-                            onClick={() => removeFromCart(item.id, item.size)}
+                            onClick={() => removeFromCart(item.id, item.size, item.color)}
                             className="ml-auto text-red-500 hover:text-red-700 text-sm font-medium"
                           >
                             {t('merch.remove') || 'Remove'}
@@ -139,12 +140,13 @@ export default function Cart() {
                 >
                   {t('merch.checkout') || 'Proceed to Checkout'}
                 </Link>
-                <button
+                <Link
+                  to="/merch"
                   onClick={toggleCart}
                   className="block w-full text-center text-sm text-black/60 hover:text-black transition-colors"
                 >
                   {t('merch.continueShopping') || 'Continue shopping'}
-                </button>
+                </Link>
               </div>
             )}
           </motion.div>
